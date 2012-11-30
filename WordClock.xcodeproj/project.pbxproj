@@ -1,0 +1,334 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		37FDDB39166805BE007FA669 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FDDB38166805BE007FA669 /* UIKit.framework */; };
+		37FDDB3B166805BE007FA669 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FDDB3A166805BE007FA669 /* Foundation.framework */; };
+		37FDDB3D166805BE007FA669 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FDDB3C166805BE007FA669 /* CoreGraphics.framework */; };
+		37FDDB43166805BE007FA669 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDB41166805BE007FA669 /* InfoPlist.strings */; };
+		37FDDB45166805BE007FA669 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FDDB44166805BE007FA669 /* main.m */; };
+		37FDDB49166805BE007FA669 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FDDB48166805BE007FA669 /* AppDelegate.m */; };
+		37FDDB4B166805BE007FA669 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDB4A166805BE007FA669 /* Default.png */; };
+		37FDDB4D166805BE007FA669 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDB4C166805BE007FA669 /* Default@2x.png */; };
+		37FDDB4F166805BE007FA669 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDB4E166805BE007FA669 /* Default-568h@2x.png */; };
+		37FDDB52166805BE007FA669 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FDDB51166805BE007FA669 /* ViewController.m */; };
+		37FDDB55166805BE007FA669 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDB53166805BE007FA669 /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		37FDDB34166805BE007FA669 /* WordClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37FDDB38166805BE007FA669 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		37FDDB3A166805BE007FA669 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		37FDDB3C166805BE007FA669 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		37FDDB40166805BE007FA669 /* WordClock-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WordClock-Info.plist"; sourceTree = "<group>"; };
+		37FDDB42166805BE007FA669 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		37FDDB44166805BE007FA669 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		37FDDB46166805BE007FA669 /* WordClock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WordClock-Prefix.pch"; sourceTree = "<group>"; };
+		37FDDB47166805BE007FA669 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		37FDDB48166805BE007FA669 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		37FDDB4A166805BE007FA669 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		37FDDB4C166805BE007FA669 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		37FDDB4E166805BE007FA669 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		37FDDB50166805BE007FA669 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		37FDDB51166805BE007FA669 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		37FDDB54166805BE007FA669 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37FDDB31166805BE007FA669 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37FDDB39166805BE007FA669 /* UIKit.framework in Frameworks */,
+				37FDDB3B166805BE007FA669 /* Foundation.framework in Frameworks */,
+				37FDDB3D166805BE007FA669 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37FDDB29166805BE007FA669 = {
+			isa = PBXGroup;
+			children = (
+				37FDDB5B166805D8007FA669 /* Resources */,
+				37FDDB3E166805BE007FA669 /* WordClock */,
+				37FDDB711668270D007FA669 /* Categories */,
+				37FDDB3F166805BE007FA669 /* Supporting Files */,
+				37FDDB37166805BE007FA669 /* Frameworks */,
+				37FDDB35166805BE007FA669 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		37FDDB35166805BE007FA669 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37FDDB34166805BE007FA669 /* WordClock.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37FDDB37166805BE007FA669 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37FDDB38166805BE007FA669 /* UIKit.framework */,
+				37FDDB3A166805BE007FA669 /* Foundation.framework */,
+				37FDDB3C166805BE007FA669 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		37FDDB3E166805BE007FA669 /* WordClock */ = {
+			isa = PBXGroup;
+			children = (
+				37FDDB47166805BE007FA669 /* AppDelegate.h */,
+				37FDDB48166805BE007FA669 /* AppDelegate.m */,
+				37FDDB50166805BE007FA669 /* ViewController.h */,
+				37FDDB51166805BE007FA669 /* ViewController.m */,
+			);
+			path = WordClock;
+			sourceTree = "<group>";
+		};
+		37FDDB3F166805BE007FA669 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				37FDDB40166805BE007FA669 /* WordClock-Info.plist */,
+				37FDDB41166805BE007FA669 /* InfoPlist.strings */,
+				37FDDB44166805BE007FA669 /* main.m */,
+				37FDDB46166805BE007FA669 /* WordClock-Prefix.pch */,
+				37FDDB4A166805BE007FA669 /* Default.png */,
+				37FDDB4C166805BE007FA669 /* Default@2x.png */,
+				37FDDB4E166805BE007FA669 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			path = WordClock;
+			sourceTree = "<group>";
+		};
+		37FDDB5B166805D8007FA669 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				37FDDB5D166805ED007FA669 /* Images */,
+				37FDDB5C166805E7007FA669 /* Xibs */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		37FDDB5C166805E7007FA669 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				37FDDB53166805BE007FA669 /* ViewController.xib */,
+			);
+			name = Xibs;
+			sourceTree = "<group>";
+		};
+		37FDDB5D166805ED007FA669 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		37FDDB711668270D007FA669 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37FDDB33166805BE007FA669 /* WordClock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37FDDB58166805BE007FA669 /* Build configuration list for PBXNativeTarget "WordClock" */;
+			buildPhases = (
+				37FDDB30166805BE007FA669 /* Sources */,
+				37FDDB31166805BE007FA669 /* Frameworks */,
+				37FDDB32166805BE007FA669 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WordClock;
+			productName = WordClock;
+			productReference = 37FDDB34166805BE007FA669 /* WordClock.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37FDDB2B166805BE007FA669 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Braxio Interactive";
+			};
+			buildConfigurationList = 37FDDB2E166805BE007FA669 /* Build configuration list for PBXProject "WordClock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 37FDDB29166805BE007FA669;
+			productRefGroup = 37FDDB35166805BE007FA669 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37FDDB33166805BE007FA669 /* WordClock */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37FDDB32166805BE007FA669 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37FDDB43166805BE007FA669 /* InfoPlist.strings in Resources */,
+				37FDDB4B166805BE007FA669 /* Default.png in Resources */,
+				37FDDB4D166805BE007FA669 /* Default@2x.png in Resources */,
+				37FDDB4F166805BE007FA669 /* Default-568h@2x.png in Resources */,
+				37FDDB55166805BE007FA669 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37FDDB30166805BE007FA669 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37FDDB45166805BE007FA669 /* main.m in Sources */,
+				37FDDB49166805BE007FA669 /* AppDelegate.m in Sources */,
+				37FDDB52166805BE007FA669 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		37FDDB41166805BE007FA669 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37FDDB42166805BE007FA669 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		37FDDB53166805BE007FA669 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37FDDB54166805BE007FA669 /* en */,
+			);
+			name = ViewController.xib;
+			path = WordClock;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		37FDDB56166805BE007FA669 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		37FDDB57166805BE007FA669 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37FDDB59166805BE007FA669 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WordClock/WordClock-Prefix.pch";
+				INFOPLIST_FILE = "WordClock/WordClock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		37FDDB5A166805BE007FA669 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WordClock/WordClock-Prefix.pch";
+				INFOPLIST_FILE = "WordClock/WordClock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37FDDB2E166805BE007FA669 /* Build configuration list for PBXProject "WordClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37FDDB56166805BE007FA669 /* Debug */,
+				37FDDB57166805BE007FA669 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37FDDB58166805BE007FA669 /* Build configuration list for PBXNativeTarget "WordClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37FDDB59166805BE007FA669 /* Debug */,
+				37FDDB5A166805BE007FA669 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37FDDB2B166805BE007FA669 /* Project object */;
+}
