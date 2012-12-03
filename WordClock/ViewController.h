@@ -20,6 +20,8 @@
 
 @property NSMutableArray *elements;
 
+@property (weak, nonatomic) IBOutlet UIButton *configButton;
+
 @property (nonatomic) TPTRotaryChooser *forgroundRotaryChooser;
 @property (nonatomic) TPTRotaryChooser *backgroundRotaryChooser;
 

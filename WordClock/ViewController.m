@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIImage+ImageWithColor.h"
 
 #define kTextHeight 60
 #define kTextWidth	60
@@ -162,7 +163,9 @@ NSArray *backgroundColors;
 	
 	[self.optionsView addSubview:forgroundRotaryChooser];
 	[self.optionsView addSubview:backgroundRotaryChooser];
-
+	
+	[self.configButton setAlpha:kHideAlpha];
+	
 	[self updateTime];
 }
 
@@ -173,6 +176,7 @@ NSArray *backgroundColors;
 	{
 		label.textColor = color;
 	}
+	[self.configButton setImage:[UIImage imageNamed:@"config" imageWithColor:color] forState:UIControlStateNormal];
 }
 
 - (void) updateTime

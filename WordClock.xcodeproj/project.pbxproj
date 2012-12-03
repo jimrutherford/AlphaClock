@@ -27,6 +27,7 @@
 		37FDDBA3166D51D6007FA669 /* bacgroundColors@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBA0166D51D6007FA669 /* bacgroundColors@2x.png */; };
 		37FDDBA4166D51D6007FA669 /* dial@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBA1166D51D6007FA669 /* dial@2x.png */; };
 		37FDDBA5166D51D6007FA669 /* forgroundColors@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBA2166D51D6007FA669 /* forgroundColors@2x.png */; };
+		37FDDBA9166D6E22007FA669 /* UIImage+ImageWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FDDBA8166D6E22007FA669 /* UIImage+ImageWithColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,8 @@
 		37FDDBA0166D51D6007FA669 /* bacgroundColors@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bacgroundColors@2x.png"; path = "WordClock/images/bacgroundColors@2x.png"; sourceTree = "<group>"; };
 		37FDDBA1166D51D6007FA669 /* dial@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "dial@2x.png"; path = "WordClock/images/dial@2x.png"; sourceTree = "<group>"; };
 		37FDDBA2166D51D6007FA669 /* forgroundColors@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "forgroundColors@2x.png"; path = "WordClock/images/forgroundColors@2x.png"; sourceTree = "<group>"; };
+		37FDDBA7166D6E22007FA669 /* UIImage+ImageWithColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithColor.h"; sourceTree = "<group>"; };
+		37FDDBA8166D6E22007FA669 /* UIImage+ImageWithColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,7 @@
 		37FDDB3E166805BE007FA669 /* WordClock */ = {
 			isa = PBXGroup;
 			children = (
+				37FDDBA6166D6E08007FA669 /* Categories */,
 				37FDDB95166D3B81007FA669 /* Controls */,
 				37FDDB47166805BE007FA669 /* AppDelegate.h */,
 				37FDDB48166805BE007FA669 /* AppDelegate.m */,
@@ -176,6 +180,15 @@
 				37FDDB93166D3B7C007FA669 /* TPTRotaryChooser.m */,
 			);
 			name = Controls;
+			sourceTree = "<group>";
+		};
+		37FDDBA6166D6E08007FA669 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				37FDDBA7166D6E22007FA669 /* UIImage+ImageWithColor.h */,
+				37FDDBA8166D6E22007FA669 /* UIImage+ImageWithColor.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +268,7 @@
 				37FDDB49166805BE007FA669 /* AppDelegate.m in Sources */,
 				37FDDB52166805BE007FA669 /* ViewController.m in Sources */,
 				37FDDB94166D3B7C007FA669 /* TPTRotaryChooser.m in Sources */,
+				37FDDBA9166D6E22007FA669 /* UIImage+ImageWithColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
