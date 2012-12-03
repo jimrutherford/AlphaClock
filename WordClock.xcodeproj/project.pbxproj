@@ -18,6 +18,10 @@
 		37FDDB4F166805BE007FA669 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDB4E166805BE007FA669 /* Default-568h@2x.png */; };
 		37FDDB52166805BE007FA669 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FDDB51166805BE007FA669 /* ViewController.m */; };
 		37FDDB55166805BE007FA669 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDB53166805BE007FA669 /* ViewController.xib */; };
+		37FDDB8C166D11E2007FA669 /* config.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDB89166D11E2007FA669 /* config.png */; };
+		37FDDB8D166D11E2007FA669 /* config@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDB8A166D11E2007FA669 /* config@2x.png */; };
+		37FDDB8E166D11E2007FA669 /* optionsBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDB8B166D11E2007FA669 /* optionsBG@2x.png */; };
+		37FDDB91166D2301007FA669 /* clockViewShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDB90166D2301007FA669 /* clockViewShadow@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,10 @@
 		37FDDB50166805BE007FA669 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		37FDDB51166805BE007FA669 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		37FDDB54166805BE007FA669 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		37FDDB89166D11E2007FA669 /* config.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = config.png; path = WordClock/images/config.png; sourceTree = "<group>"; };
+		37FDDB8A166D11E2007FA669 /* config@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "config@2x.png"; path = "WordClock/images/config@2x.png"; sourceTree = "<group>"; };
+		37FDDB8B166D11E2007FA669 /* optionsBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "optionsBG@2x.png"; path = "WordClock/images/optionsBG@2x.png"; sourceTree = "<group>"; };
+		37FDDB90166D2301007FA669 /* clockViewShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clockViewShadow@2x.png"; path = "WordClock/images/clockViewShadow@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +137,10 @@
 		37FDDB5D166805ED007FA669 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				37FDDB89166D11E2007FA669 /* config.png */,
+				37FDDB8A166D11E2007FA669 /* config@2x.png */,
+				37FDDB8B166D11E2007FA669 /* optionsBG@2x.png */,
+				37FDDB90166D2301007FA669 /* clockViewShadow@2x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -196,6 +208,10 @@
 				37FDDB4D166805BE007FA669 /* Default@2x.png in Resources */,
 				37FDDB4F166805BE007FA669 /* Default-568h@2x.png in Resources */,
 				37FDDB55166805BE007FA669 /* ViewController.xib in Resources */,
+				37FDDB8C166D11E2007FA669 /* config.png in Resources */,
+				37FDDB8D166D11E2007FA669 /* config@2x.png in Resources */,
+				37FDDB8E166D11E2007FA669 /* optionsBG@2x.png in Resources */,
+				37FDDB91166D2301007FA669 /* clockViewShadow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +343,7 @@
 				37FDDB5A166805BE007FA669 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,6 +10,12 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIView *clockView;
+- (IBAction)configButton:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIImageView *clockBackground;
+@property (weak, nonatomic) IBOutlet UIImageView *clockViewDropShadow;
+
 @property NSMutableArray *elements;
 
 

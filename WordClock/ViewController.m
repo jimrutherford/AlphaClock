@@ -24,6 +24,7 @@
 @implementation ViewController
 
 @synthesize elements;
+@synthesize clockBackground;
 
 NSCalendar *gregorianCal;
 NSArray * hours;
@@ -38,6 +39,9 @@ NSString *lastHour;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
+	
+	
 	
 	elements = [[NSMutableArray alloc] init];
 	
@@ -59,7 +63,7 @@ NSString *lastHour;
 			label.textColor = [UIColor whiteColor];
 			label.alpha = kHideAlpha;
 			
-			[self.view addSubview:label];
+			[self.clockView addSubview:label];
 			[elements addObject:label];
 		}
 	}
@@ -106,9 +110,13 @@ NSString *lastHour;
 	
 	// init some objects that will be needed later
 	gregorianCal = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-	hours = @[@"", @"ONE", @"TWO", @"THREE", @"FOUR", @"FIVE", @"SIX", @"SEVEN", @"EIGHT", @"NINE", @"TEN", @"ELEVEN", @"TWELVE"];
+	hours = @[@"TWELVE", @"ONE", @"TWO", @"THREE", @"FOUR", @"FIVE", @"SIX", @"SEVEN", @"EIGHT", @"NINE", @"TEN", @"ELEVEN", @"TWELVE"];
 	minutes = @[@"OCLOCK", @"five", @"ten", @"QUARTER", @"TWENTY", @"TWENTYFIVE", @"HALF", @"TWENTYFIVE", @"TWENTY", @"QUARTER", @"ten", @"five"];
 	lastMinute = lastHour = lastModifier = @"";
+	
+	[self.clockBackground setFrame:CGRectMake(0, 0, 600, 600)]; //self.view.frame.size.width, self.view.frame.size.height);
+	[self.clockViewDropShadow setFrame:CGRectMake(15, 0, self.clockViewDropShadow.frame.size.width, self.clockViewDropShadow.frame.size.height)];
+	
 	
 	[self updateTime];
 }
@@ -119,10 +127,17 @@ NSString *lastHour;
 	NSDateComponents *dateComponents = [gregorianCal components: (NSHourCalendarUnit | NSMinuteCalendarUnit)
 												  fromDate: [NSDate date]];
 
-	[self displayHour:[dateComponents hour]];
 	[self displayMinute:[dateComponents minute]];
 	
-	[self performSelector:@selector(updateTime) withObject:self afterDelay:kShowAlpha];
+	int hour = [dateComponents hour];
+	if ([dateComponents minute] > 34)
+	{
+		hour += 1;
+	}
+	
+	[self displayHour:hour];
+	
+	[self performSelector:@selector(updateTime) withObject:self afterDelay:15.0f];
 }
 
 - (int) indexFromMinute:(int)minute
@@ -135,12 +150,12 @@ NSString *lastHour;
 	NSString *minuteKey = [minutes objectAtIndex:[self indexFromMinute:minute]];
 	
 	NSString *modifierKey = minute > 30 ? @"TO" : @"PAST";
-	if (minute == 0) modifierKey = @"OCLOCK";
+	if (minute < 5) modifierKey = @"OCLOCK";
 		
 	if (![lastMinute isEqualToString:minuteKey])
 	{
 		[self updateTextStartingAtIndex:[[dict objectForKey:minuteKey] intValue] withLength:[minuteKey length] showing:YES];
-		if (![lastMinute isEqualToString:@"TWENTY"] && [modifierKey isEqualToString:@"PAST"])
+		if (!([lastMinute isEqualToString:@"TWENTY"] && [modifierKey isEqualToString:@"PAST"]))
 		{
 			[self updateTextStartingAtIndex:[[dict objectForKey:lastMinute] intValue] withLength:[lastMinute length] showing:NO];
 		}
@@ -158,7 +173,7 @@ NSString *lastHour;
 
 - (void) displayHour:(int)hour
 {
-	NSString *key = [hours objectAtIndex:hour];
+	NSString *key = [hours objectAtIndex:hour % 12];
 	
 	if (![lastHour isEqualToString:key])
 	{
@@ -192,4 +207,27 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)configButton:(id)sender {
+	
+	CGRect clockViewFrame = self.clockView.frame;
+    
+	if (clockViewFrame.origin.x == 0)
+	{
+		
+		clockViewFrame.origin.x = 250;
+	}
+	else
+	{
+		clockViewFrame.origin.x = 0;
+	}
+	
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+	
+    self.clockView.frame = clockViewFrame;
+	
+    [UIView commitAnimations];
+
+}
 @end
