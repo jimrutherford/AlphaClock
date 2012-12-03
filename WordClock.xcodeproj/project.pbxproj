@@ -23,8 +23,10 @@
 		37FDDB8E166D11E2007FA669 /* optionsBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDB8B166D11E2007FA669 /* optionsBG@2x.png */; };
 		37FDDB91166D2301007FA669 /* clockViewShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDB90166D2301007FA669 /* clockViewShadow@2x.png */; };
 		37FDDB94166D3B7C007FA669 /* TPTRotaryChooser.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FDDB93166D3B7C007FA669 /* TPTRotaryChooser.m */; };
-		37FDDB98166D3B9F007FA669 /* colorDialBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDB96166D3B9F007FA669 /* colorDialBackground@2x.png */; };
-		37FDDB99166D3B9F007FA669 /* dial@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDB97166D3B9F007FA669 /* dial@2x.png */; };
+		37FDDB9F166D4DA6007FA669 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FDDB9E166D4DA6007FA669 /* QuartzCore.framework */; };
+		37FDDBA3166D51D6007FA669 /* bacgroundColors@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBA0166D51D6007FA669 /* bacgroundColors@2x.png */; };
+		37FDDBA4166D51D6007FA669 /* dial@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBA1166D51D6007FA669 /* dial@2x.png */; };
+		37FDDBA5166D51D6007FA669 /* forgroundColors@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBA2166D51D6007FA669 /* forgroundColors@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,8 +52,10 @@
 		37FDDB90166D2301007FA669 /* clockViewShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clockViewShadow@2x.png"; path = "WordClock/images/clockViewShadow@2x.png"; sourceTree = "<group>"; };
 		37FDDB92166D3B7C007FA669 /* TPTRotaryChooser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPTRotaryChooser.h; sourceTree = "<group>"; };
 		37FDDB93166D3B7C007FA669 /* TPTRotaryChooser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPTRotaryChooser.m; sourceTree = "<group>"; };
-		37FDDB96166D3B9F007FA669 /* colorDialBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "colorDialBackground@2x.png"; sourceTree = "<group>"; };
-		37FDDB97166D3B9F007FA669 /* dial@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dial@2x.png"; sourceTree = "<group>"; };
+		37FDDB9E166D4DA6007FA669 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		37FDDBA0166D51D6007FA669 /* bacgroundColors@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bacgroundColors@2x.png"; path = "WordClock/images/bacgroundColors@2x.png"; sourceTree = "<group>"; };
+		37FDDBA1166D51D6007FA669 /* dial@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "dial@2x.png"; path = "WordClock/images/dial@2x.png"; sourceTree = "<group>"; };
+		37FDDBA2166D51D6007FA669 /* forgroundColors@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "forgroundColors@2x.png"; path = "WordClock/images/forgroundColors@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37FDDB9F166D4DA6007FA669 /* QuartzCore.framework in Frameworks */,
 				37FDDB39166805BE007FA669 /* UIKit.framework in Frameworks */,
 				37FDDB3B166805BE007FA669 /* Foundation.framework in Frameworks */,
 				37FDDB3D166805BE007FA669 /* CoreGraphics.framework in Frameworks */,
@@ -71,6 +76,7 @@
 		37FDDB29166805BE007FA669 = {
 			isa = PBXGroup;
 			children = (
+				37FDDB9E166D4DA6007FA669 /* QuartzCore.framework */,
 				37FDDB5B166805D8007FA669 /* Resources */,
 				37FDDB3E166805BE007FA669 /* WordClock */,
 				37FDDB711668270D007FA669 /* Categories */,
@@ -145,8 +151,9 @@
 		37FDDB5D166805ED007FA669 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				37FDDB96166D3B9F007FA669 /* colorDialBackground@2x.png */,
-				37FDDB97166D3B9F007FA669 /* dial@2x.png */,
+				37FDDBA0166D51D6007FA669 /* bacgroundColors@2x.png */,
+				37FDDBA1166D51D6007FA669 /* dial@2x.png */,
+				37FDDBA2166D51D6007FA669 /* forgroundColors@2x.png */,
 				37FDDB89166D11E2007FA669 /* config.png */,
 				37FDDB8A166D11E2007FA669 /* config@2x.png */,
 				37FDDB8B166D11E2007FA669 /* optionsBG@2x.png */,
@@ -231,8 +238,9 @@
 				37FDDB8D166D11E2007FA669 /* config@2x.png in Resources */,
 				37FDDB8E166D11E2007FA669 /* optionsBG@2x.png in Resources */,
 				37FDDB91166D2301007FA669 /* clockViewShadow@2x.png in Resources */,
-				37FDDB98166D3B9F007FA669 /* colorDialBackground@2x.png in Resources */,
-				37FDDB99166D3B9F007FA669 /* dial@2x.png in Resources */,
+				37FDDBA3166D51D6007FA669 /* bacgroundColors@2x.png in Resources */,
+				37FDDBA4166D51D6007FA669 /* dial@2x.png in Resources */,
+				37FDDBA5166D51D6007FA669 /* forgroundColors@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

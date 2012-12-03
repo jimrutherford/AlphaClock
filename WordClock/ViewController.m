@@ -26,6 +26,8 @@
 @synthesize elements;
 @synthesize clockBackground;
 @synthesize clockViewDropShadow;
+@synthesize forgroundRotaryChooser;
+@synthesize backgroundRotaryChooser;
 
 NSCalendar *gregorianCal;
 NSArray * hours;
@@ -36,6 +38,8 @@ NSString *lastModifier;
 NSString *lastMinute;
 NSString *lastHour;
 
+NSArray *forgroundColors;
+NSArray *backgroundColors;
 
 - (void)viewDidLoad
 {
@@ -110,14 +114,66 @@ NSString *lastHour;
 	gregorianCal = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
 	hours = @[@"TWELVE", @"ONE", @"TWO", @"THREE", @"FOUR", @"FIVE", @"SIX", @"SEVEN", @"EIGHT", @"NINE", @"TEN", @"ELEVEN", @"TWELVE"];
 	minutes = @[@"OCLOCK", @"five", @"ten", @"QUARTER", @"TWENTY", @"TWENTYFIVE", @"HALF", @"TWENTYFIVE", @"TWENTY", @"QUARTER", @"ten", @"five"];
+	
+	forgroundColors = @[
+	[UIColor colorWithRed:1.00f green:0.62f blue:0.63f alpha:1.00f],
+	[UIColor colorWithRed:0.61f green:0.82f blue:1.00f alpha:1.00f],
+	[UIColor colorWithRed:1.00f green:0.91f blue:0.62f alpha:1.00f],
+	[UIColor colorWithRed:0.82f green:0.61f blue:1.00f alpha:1.00f],
+	[UIColor colorWithRed:0.59f green:1.00f blue:0.62f alpha:1.00f],
+	[UIColor colorWithRed:0.93f green:0.94f blue:0.94f alpha:1.00f]
+	];
+
+	backgroundColors = @[
+	[UIColor colorWithRed:0.40f green:0.00f blue:0.00f alpha:1.00f],
+	[UIColor colorWithRed:0.00f green:0.00f blue:0.42f alpha:1.00f],
+	[UIColor colorWithRed:0.24f green:0.18f blue:0.00f alpha:1.00f],
+	[UIColor colorWithRed:0.24f green:0.00f blue:0.25f alpha:1.00f],
+	[UIColor colorWithRed:0.00f green:0.25f blue:0.00f alpha:1.00f],
+	[UIColor colorWithRed:0.00f green:0.00f blue:0.00f alpha:1.00f]
+	];
+	
 	lastMinute = lastHour = lastModifier = @"";
 	
 	[clockBackground setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
 	[clockViewDropShadow setFrame:CGRectMake(-15, 0, clockViewDropShadow.frame.size.width, clockViewDropShadow.frame.size.height)];
 	
+	
+	forgroundRotaryChooser = [[TPTRotaryChooser alloc] initWithFrame:CGRectMake(10, 20, 200, 200)];
+	forgroundRotaryChooser.backgroundColor = [UIColor clearColor];
+	forgroundRotaryChooser.numberOfSegments = 6;
+	forgroundRotaryChooser.selectedSegment = 5;
+	forgroundRotaryChooser.delegate = self;
+	forgroundRotaryChooser.backgroundImage = [UIImage imageNamed:@"forgroundColors"];
+	forgroundRotaryChooser.knobImage = [UIImage imageNamed:@"dial"];
+	forgroundRotaryChooser.tag = 100;
+
+	backgroundRotaryChooser = [[TPTRotaryChooser alloc] initWithFrame:CGRectMake(10, self.view.frame.size.height - 200 - 20, 200, 200)];
+	backgroundRotaryChooser.backgroundColor = [UIColor clearColor];
+	backgroundRotaryChooser.numberOfSegments = 6;
+	backgroundRotaryChooser.selectedSegment = 5;
+	backgroundRotaryChooser.delegate = self;
+	backgroundRotaryChooser.backgroundImage = [UIImage imageNamed:@"bacgroundColors"];
+	backgroundRotaryChooser.knobImage = [UIImage imageNamed:@"dial"];
+	backgroundRotaryChooser.tag = 200;
+	
+	[self setForgroundColor:[UIColor whiteColor]];
+	[self.clockBackground setBackgroundColor:[UIColor blackColor]];
+	
+	[self.optionsView addSubview:forgroundRotaryChooser];
+	[self.optionsView addSubview:backgroundRotaryChooser];
+
 	[self updateTime];
 }
 
+
+- (void) setForgroundColor:(UIColor*)color
+{
+	for (UILabel* label in elements)
+	{
+		label.textColor = color;
+	}
+}
 
 - (void) updateTime
 {
@@ -227,4 +283,28 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     [UIView commitAnimations];
 
 }
+
+- (void)rotaryChooserDidChangeSelectedSegment:(TPTRotaryChooser *)chooser
+{
+	NSLog(@"changing");
+	if (chooser.tag == 100)
+	{
+		[self setForgroundColor:[forgroundColors objectAtIndex:chooser.currentSegment]];
+	}
+}
+
+- (void)rotaryChooserDidSelectedSegment:(TPTRotaryChooser *)chooser
+{
+	NSLog(@"selected");
+	if (chooser.tag == 100)
+	{
+		[self setForgroundColor:[forgroundColors objectAtIndex:chooser.selectedSegment]];
+	}
+	else if (chooser.tag == 200)
+	{
+		[self.clockBackground setBackgroundColor:[backgroundColors objectAtIndex:chooser.selectedSegment]];
+	}
+}
+
+
 @end

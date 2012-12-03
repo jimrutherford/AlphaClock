@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TPTRotaryChooser.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <TPTRotaryChooserDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *clockView;
+@property (weak, nonatomic) IBOutlet UIView *optionsView;
 - (IBAction)configButton:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIImageView *clockBackground;
@@ -18,5 +20,7 @@
 
 @property NSMutableArray *elements;
 
+@property (nonatomic) TPTRotaryChooser *forgroundRotaryChooser;
+@property (nonatomic) TPTRotaryChooser *backgroundRotaryChooser;
 
 @end
