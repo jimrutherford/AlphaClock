@@ -22,6 +22,9 @@
 		37FDDB8D166D11E2007FA669 /* config@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDB8A166D11E2007FA669 /* config@2x.png */; };
 		37FDDB8E166D11E2007FA669 /* optionsBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDB8B166D11E2007FA669 /* optionsBG@2x.png */; };
 		37FDDB91166D2301007FA669 /* clockViewShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDB90166D2301007FA669 /* clockViewShadow@2x.png */; };
+		37FDDB94166D3B7C007FA669 /* TPTRotaryChooser.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FDDB93166D3B7C007FA669 /* TPTRotaryChooser.m */; };
+		37FDDB98166D3B9F007FA669 /* colorDialBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDB96166D3B9F007FA669 /* colorDialBackground@2x.png */; };
+		37FDDB99166D3B9F007FA669 /* dial@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDB97166D3B9F007FA669 /* dial@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,10 @@
 		37FDDB8A166D11E2007FA669 /* config@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "config@2x.png"; path = "WordClock/images/config@2x.png"; sourceTree = "<group>"; };
 		37FDDB8B166D11E2007FA669 /* optionsBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "optionsBG@2x.png"; path = "WordClock/images/optionsBG@2x.png"; sourceTree = "<group>"; };
 		37FDDB90166D2301007FA669 /* clockViewShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clockViewShadow@2x.png"; path = "WordClock/images/clockViewShadow@2x.png"; sourceTree = "<group>"; };
+		37FDDB92166D3B7C007FA669 /* TPTRotaryChooser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPTRotaryChooser.h; sourceTree = "<group>"; };
+		37FDDB93166D3B7C007FA669 /* TPTRotaryChooser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPTRotaryChooser.m; sourceTree = "<group>"; };
+		37FDDB96166D3B9F007FA669 /* colorDialBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "colorDialBackground@2x.png"; sourceTree = "<group>"; };
+		37FDDB97166D3B9F007FA669 /* dial@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dial@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +101,7 @@
 		37FDDB3E166805BE007FA669 /* WordClock */ = {
 			isa = PBXGroup;
 			children = (
+				37FDDB95166D3B81007FA669 /* Controls */,
 				37FDDB47166805BE007FA669 /* AppDelegate.h */,
 				37FDDB48166805BE007FA669 /* AppDelegate.m */,
 				37FDDB50166805BE007FA669 /* ViewController.h */,
@@ -137,6 +145,8 @@
 		37FDDB5D166805ED007FA669 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				37FDDB96166D3B9F007FA669 /* colorDialBackground@2x.png */,
+				37FDDB97166D3B9F007FA669 /* dial@2x.png */,
 				37FDDB89166D11E2007FA669 /* config.png */,
 				37FDDB8A166D11E2007FA669 /* config@2x.png */,
 				37FDDB8B166D11E2007FA669 /* optionsBG@2x.png */,
@@ -150,6 +160,15 @@
 			children = (
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		37FDDB95166D3B81007FA669 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				37FDDB92166D3B7C007FA669 /* TPTRotaryChooser.h */,
+				37FDDB93166D3B7C007FA669 /* TPTRotaryChooser.m */,
+			);
+			name = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +231,8 @@
 				37FDDB8D166D11E2007FA669 /* config@2x.png in Resources */,
 				37FDDB8E166D11E2007FA669 /* optionsBG@2x.png in Resources */,
 				37FDDB91166D2301007FA669 /* clockViewShadow@2x.png in Resources */,
+				37FDDB98166D3B9F007FA669 /* colorDialBackground@2x.png in Resources */,
+				37FDDB99166D3B9F007FA669 /* dial@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +246,7 @@
 				37FDDB45166805BE007FA669 /* main.m in Sources */,
 				37FDDB49166805BE007FA669 /* AppDelegate.m in Sources */,
 				37FDDB52166805BE007FA669 /* ViewController.m in Sources */,
+				37FDDB94166D3B7C007FA669 /* TPTRotaryChooser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

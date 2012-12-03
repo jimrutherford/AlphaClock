@@ -25,6 +25,7 @@
 
 @synthesize elements;
 @synthesize clockBackground;
+@synthesize clockViewDropShadow;
 
 NSCalendar *gregorianCal;
 NSArray * hours;
@@ -39,10 +40,7 @@ NSString *lastHour;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
-	
-	
-	
+
 	elements = [[NSMutableArray alloc] init];
 	
 	float horizontalCenterOffset = (self.view.frame.size.width - (kNumberOfColumns * (kTextWidth + kHorizontalPadding))) /2;
@@ -114,9 +112,8 @@ NSString *lastHour;
 	minutes = @[@"OCLOCK", @"five", @"ten", @"QUARTER", @"TWENTY", @"TWENTYFIVE", @"HALF", @"TWENTYFIVE", @"TWENTY", @"QUARTER", @"ten", @"five"];
 	lastMinute = lastHour = lastModifier = @"";
 	
-	[self.clockBackground setFrame:CGRectMake(0, 0, 600, 600)]; //self.view.frame.size.width, self.view.frame.size.height);
-	[self.clockViewDropShadow setFrame:CGRectMake(15, 0, self.clockViewDropShadow.frame.size.width, self.clockViewDropShadow.frame.size.height)];
-	
+	[clockBackground setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+	[clockViewDropShadow setFrame:CGRectMake(-15, 0, clockViewDropShadow.frame.size.width, clockViewDropShadow.frame.size.height)];
 	
 	[self updateTime];
 }
