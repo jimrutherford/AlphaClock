@@ -206,16 +206,13 @@ NSArray *backgroundColors;
 {
 	NSString *minuteKey = [minutes objectAtIndex:[self indexFromMinute:minute]];
 	
-	NSString *modifierKey = minute > 30 ? @"TO" : @"PAST";
+	NSString *modifierKey = minute > 35 ? @"TO" : @"PAST";
 	if (minute < 5) modifierKey = @"OCLOCK";
 		
 	if (![lastMinute isEqualToString:minuteKey])
 	{
+		[self updateTextStartingAtIndex:[[dict objectForKey:lastMinute] intValue] withLength:[lastMinute length] showing:NO];
 		[self updateTextStartingAtIndex:[[dict objectForKey:minuteKey] intValue] withLength:[minuteKey length] showing:YES];
-		if (!([lastMinute isEqualToString:@"TWENTY"] && [modifierKey isEqualToString:@"PAST"]))
-		{
-			[self updateTextStartingAtIndex:[[dict objectForKey:lastMinute] intValue] withLength:[lastMinute length] showing:NO];
-		}
 		lastMinute = minuteKey;
 	}
 	
@@ -243,9 +240,15 @@ NSArray *backgroundColors;
 
 - (void) updateTextStartingAtIndex:(int)index withLength:(int)length showing:(BOOL)show
 {
+	UILabel * label;
+	float newAlpha = show ? kShowAlpha : kHideAlpha;
 	for (int a = index; a < index + length; a++)
 	{
-		[(UILabel*)[self.elements objectAtIndex:a] setAlpha:(show ? kShowAlpha : kHideAlpha)];
+		label = (UILabel*)[self.elements objectAtIndex:a];
+		if (newAlpha != label.alpha)
+		{
+			[label setAlpha:newAlpha];
+		}
 	}
 }
 
