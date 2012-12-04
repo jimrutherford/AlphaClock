@@ -29,6 +29,14 @@
 		37FDDBA5166D51D6007FA669 /* forgroundColors@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBA2166D51D6007FA669 /* forgroundColors@2x.png */; };
 		37FDDBA9166D6E22007FA669 /* UIImage+ImageWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FDDBA8166D6E22007FA669 /* UIImage+ImageWithColor.m */; };
 		37FDDBAE166E7A13007FA669 /* minuteIndicator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBAD166E7A13007FA669 /* minuteIndicator@2x.png */; };
+		37FDDBB6166E974D007FA669 /* bacgroundColors.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBAF166E974D007FA669 /* bacgroundColors.png */; };
+		37FDDBB7166E974D007FA669 /* clockViewShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBB0166E974D007FA669 /* clockViewShadow.png */; };
+		37FDDBB8166E974D007FA669 /* config.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBB1166E974D007FA669 /* config.png */; };
+		37FDDBB9166E974D007FA669 /* dial.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBB2166E974D007FA669 /* dial.png */; };
+		37FDDBBA166E974D007FA669 /* forgroundColors.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBB3166E974D007FA669 /* forgroundColors.png */; };
+		37FDDBBB166E974D007FA669 /* minuteIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBB4166E974D007FA669 /* minuteIndicator.png */; };
+		37FDDBBC166E974D007FA669 /* optionsBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBB5166E974D007FA669 /* optionsBG.png */; };
+		37FDDBBF166EA0AE007FA669 /* UIColor+UIColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FDDBBE166EA0AE007FA669 /* UIColor+UIColorAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +69,15 @@
 		37FDDBA7166D6E22007FA669 /* UIImage+ImageWithColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithColor.h"; sourceTree = "<group>"; };
 		37FDDBA8166D6E22007FA669 /* UIImage+ImageWithColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithColor.m"; sourceTree = "<group>"; };
 		37FDDBAD166E7A13007FA669 /* minuteIndicator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "minuteIndicator@2x.png"; path = "WordClock/images/minuteIndicator@2x.png"; sourceTree = "<group>"; };
+		37FDDBAF166E974D007FA669 /* bacgroundColors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bacgroundColors.png; path = WordClock/images/bacgroundColors.png; sourceTree = "<group>"; };
+		37FDDBB0166E974D007FA669 /* clockViewShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clockViewShadow.png; path = WordClock/images/clockViewShadow.png; sourceTree = "<group>"; };
+		37FDDBB1166E974D007FA669 /* config.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = config.png; path = WordClock/images/config.png; sourceTree = "<group>"; };
+		37FDDBB2166E974D007FA669 /* dial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dial.png; path = WordClock/images/dial.png; sourceTree = "<group>"; };
+		37FDDBB3166E974D007FA669 /* forgroundColors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = forgroundColors.png; path = WordClock/images/forgroundColors.png; sourceTree = "<group>"; };
+		37FDDBB4166E974D007FA669 /* minuteIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = minuteIndicator.png; path = WordClock/images/minuteIndicator.png; sourceTree = "<group>"; };
+		37FDDBB5166E974D007FA669 /* optionsBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = optionsBG.png; path = WordClock/images/optionsBG.png; sourceTree = "<group>"; };
+		37FDDBBD166EA0AE007FA669 /* UIColor+UIColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+UIColorAdditions.h"; sourceTree = "<group>"; };
+		37FDDBBE166EA0AE007FA669 /* UIColor+UIColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+UIColorAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +182,13 @@
 				37FDDB8A166D11E2007FA669 /* config@2x.png */,
 				37FDDB8B166D11E2007FA669 /* optionsBG@2x.png */,
 				37FDDB90166D2301007FA669 /* clockViewShadow@2x.png */,
+				37FDDBAF166E974D007FA669 /* bacgroundColors.png */,
+				37FDDBB0166E974D007FA669 /* clockViewShadow.png */,
+				37FDDBB1166E974D007FA669 /* config.png */,
+				37FDDBB2166E974D007FA669 /* dial.png */,
+				37FDDBB3166E974D007FA669 /* forgroundColors.png */,
+				37FDDBB4166E974D007FA669 /* minuteIndicator.png */,
+				37FDDBB5166E974D007FA669 /* optionsBG.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -190,6 +214,8 @@
 			children = (
 				37FDDBA7166D6E22007FA669 /* UIImage+ImageWithColor.h */,
 				37FDDBA8166D6E22007FA669 /* UIImage+ImageWithColor.m */,
+				37FDDBBD166EA0AE007FA669 /* UIColor+UIColorAdditions.h */,
+				37FDDBBE166EA0AE007FA669 /* UIColor+UIColorAdditions.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -258,6 +284,13 @@
 				37FDDBA4166D51D6007FA669 /* dial@2x.png in Resources */,
 				37FDDBA5166D51D6007FA669 /* forgroundColors@2x.png in Resources */,
 				37FDDBAE166E7A13007FA669 /* minuteIndicator@2x.png in Resources */,
+				37FDDBB6166E974D007FA669 /* bacgroundColors.png in Resources */,
+				37FDDBB7166E974D007FA669 /* clockViewShadow.png in Resources */,
+				37FDDBB8166E974D007FA669 /* config.png in Resources */,
+				37FDDBB9166E974D007FA669 /* dial.png in Resources */,
+				37FDDBBA166E974D007FA669 /* forgroundColors.png in Resources */,
+				37FDDBBB166E974D007FA669 /* minuteIndicator.png in Resources */,
+				37FDDBBC166E974D007FA669 /* optionsBG.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +306,7 @@
 				37FDDB52166805BE007FA669 /* ViewController.m in Sources */,
 				37FDDB94166D3B7C007FA669 /* TPTRotaryChooser.m in Sources */,
 				37FDDBA9166D6E22007FA669 /* UIImage+ImageWithColor.m in Sources */,
+				37FDDBBF166EA0AE007FA669 /* UIColor+UIColorAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

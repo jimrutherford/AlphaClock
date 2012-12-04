@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "UIImage+ImageWithColor.h"
+#import	"UIColor+UIColorAdditions.h"
 
 #define kTextHeight 60
 #define kTextWidth	60
@@ -18,6 +19,9 @@
 #define kShowAlpha 1.0f
 #define kHideAlpha 0.2f
 #define kInidicatorPadding 25
+
+#define optionKeyForgroundColor @"forgroundColor"
+#define optionKeyBackgroundColor @"backgroundColor"
 
 @interface ViewController ()
 
@@ -44,16 +48,29 @@ NSString *lastHour;
 NSArray *forgroundColors;
 NSArray *backgroundColors;
 
+NSUserDefaults *userDefaults;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
+	userDefaults = [NSUserDefaults standardUserDefaults];
+	
+	
+	
 	// get default or lastUsed colors
 	UIColor * startingForgroundColor = [UIColor whiteColor];
 	UIColor * startingBackgroundColor = [UIColor blackColor];
 	
-	
-	
+	if ([userDefaults objectForKey:optionKeyForgroundColor] != nil)
+	{
+		startingForgroundColor = [NSString colorFromNSString:[userDefaults objectForKey:optionKeyForgroundColor]];
+	}
+
+	if ([userDefaults objectForKey:optionKeyBackgroundColor] != nil)
+	{
+		startingBackgroundColor = [NSString colorFromNSString:[userDefaults objectForKey:optionKeyBackgroundColor]];
+	}
 	elements = [[NSMutableArray alloc] init];
 	minuteIndicators = [[NSMutableArray alloc] init];
 	
@@ -186,9 +203,7 @@ NSArray *backgroundColors;
 		[self.clockView addSubview:image];
 		[minuteIndicators addObject:image];
 	}
-	
-	
-	
+
 	[self updateTime];
 }
 
@@ -348,12 +363,19 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	NSLog(@"selected");
 	if (chooser.tag == 100)
 	{
-		[self setForgroundColor:[forgroundColors objectAtIndex:chooser.selectedSegment]];
+		UIColor * newForgroundColor = (UIColor*)[forgroundColors objectAtIndex:chooser.selectedSegment];
+		[self setForgroundColor:newForgroundColor];
+		NSString *stringColor = [UIColor stringFromUIColor:newForgroundColor];
+		[userDefaults setObject:stringColor forKey:optionKeyForgroundColor];
 	}
 	else if (chooser.tag == 200)
 	{
-		[self.clockBackground setBackgroundColor:[backgroundColors objectAtIndex:chooser.selectedSegment]];
+		UIColor * newBackgroundColor = (UIColor*)[backgroundColors objectAtIndex:chooser.selectedSegment];
+		[self.clockBackground setBackgroundColor:newBackgroundColor];
+		NSString *stringColor = [UIColor stringFromUIColor:newBackgroundColor];
+		[userDefaults setObject:stringColor forKey:optionKeyBackgroundColor];
 	}
+	[userDefaults synchronize];
 }
 
 
