@@ -28,6 +28,7 @@
 		37FDDBA4166D51D6007FA669 /* dial@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBA1166D51D6007FA669 /* dial@2x.png */; };
 		37FDDBA5166D51D6007FA669 /* forgroundColors@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBA2166D51D6007FA669 /* forgroundColors@2x.png */; };
 		37FDDBA9166D6E22007FA669 /* UIImage+ImageWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FDDBA8166D6E22007FA669 /* UIImage+ImageWithColor.m */; };
+		37FDDBAE166E7A13007FA669 /* minuteIndicator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBAD166E7A13007FA669 /* minuteIndicator@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		37FDDBA2166D51D6007FA669 /* forgroundColors@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "forgroundColors@2x.png"; path = "WordClock/images/forgroundColors@2x.png"; sourceTree = "<group>"; };
 		37FDDBA7166D6E22007FA669 /* UIImage+ImageWithColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithColor.h"; sourceTree = "<group>"; };
 		37FDDBA8166D6E22007FA669 /* UIImage+ImageWithColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithColor.m"; sourceTree = "<group>"; };
+		37FDDBAD166E7A13007FA669 /* minuteIndicator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "minuteIndicator@2x.png"; path = "WordClock/images/minuteIndicator@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		37FDDB5D166805ED007FA669 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				37FDDBAD166E7A13007FA669 /* minuteIndicator@2x.png */,
 				37FDDBA0166D51D6007FA669 /* bacgroundColors@2x.png */,
 				37FDDBA1166D51D6007FA669 /* dial@2x.png */,
 				37FDDBA2166D51D6007FA669 /* forgroundColors@2x.png */,
@@ -254,6 +257,7 @@
 				37FDDBA3166D51D6007FA669 /* bacgroundColors@2x.png in Resources */,
 				37FDDBA4166D51D6007FA669 /* dial@2x.png in Resources */,
 				37FDDBA5166D51D6007FA669 /* forgroundColors@2x.png in Resources */,
+				37FDDBAE166E7A13007FA669 /* minuteIndicator@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

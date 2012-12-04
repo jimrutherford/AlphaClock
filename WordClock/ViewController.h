@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *clockViewDropShadow;
 
 @property NSMutableArray *elements;
+@property NSMutableArray *minuteIndicators;
 
 @property (weak, nonatomic) IBOutlet UIButton *configButton;
 

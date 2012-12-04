@@ -17,6 +17,7 @@
 #define kNumberOfRows	10
 #define kShowAlpha 1.0f
 #define kHideAlpha 0.2f
+#define kInidicatorPadding 25
 
 @interface ViewController ()
 
@@ -25,6 +26,7 @@
 @implementation ViewController
 
 @synthesize elements;
+@synthesize minuteIndicators;
 @synthesize clockBackground;
 @synthesize clockViewDropShadow;
 @synthesize forgroundRotaryChooser;
@@ -46,7 +48,14 @@ NSArray *backgroundColors;
 {
     [super viewDidLoad];
 
+	// get default or lastUsed colors
+	UIColor * startingForgroundColor = [UIColor whiteColor];
+	UIColor * startingBackgroundColor = [UIColor blackColor];
+	
+	
+	
 	elements = [[NSMutableArray alloc] init];
+	minuteIndicators = [[NSMutableArray alloc] init];
 	
 	float horizontalCenterOffset = (self.view.frame.size.width - (kNumberOfColumns * (kTextWidth + kHorizontalPadding))) /2;
 	float verticalCenterOffset = (self.view.frame.size.height - (kNumberOfRows * (kTextHeight + kVerticalPadding))) /2;
@@ -63,7 +72,7 @@ NSArray *backgroundColors;
 			label.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:30];
 			label.textAlignment = NSTextAlignmentCenter;
 			label.text = [self randomLetter];
-			label.textColor = [UIColor whiteColor];
+			label.textColor = startingForgroundColor;
 			label.alpha = kHideAlpha;
 			
 			[self.clockView addSubview:label];
@@ -158,13 +167,27 @@ NSArray *backgroundColors;
 	backgroundRotaryChooser.knobImage = [UIImage imageNamed:@"dial"];
 	backgroundRotaryChooser.tag = 200;
 	
-	[self setForgroundColor:[UIColor whiteColor]];
-	[self.clockBackground setBackgroundColor:[UIColor blackColor]];
+	[self setForgroundColor:startingForgroundColor];
+	[self.clockBackground setBackgroundColor:startingBackgroundColor];
 	
 	[self.optionsView addSubview:forgroundRotaryChooser];
 	[self.optionsView addSubview:backgroundRotaryChooser];
 	
 	[self.configButton setAlpha:kHideAlpha];
+	
+	// draw minute indicators
+	UIImage *indicator = [UIImage imageNamed:@"minuteIndicator" imageWithColor:startingForgroundColor];
+	float minuteIndicatorHorizontalCenterOffset = (self.view.frame.size.width - (4 * indicator.size.width) - (3 * kInidicatorPadding)) /2;
+	for (int a = 0; a < 4; a++) {
+		UIImageView * image = [[UIImageView alloc] initWithImage:indicator];
+		image.frame = CGRectMake(minuteIndicatorHorizontalCenterOffset + a * kInidicatorPadding, self.view.frame.size.height - 20, indicator.size.width, indicator.size.height);
+		image.alpha = kHideAlpha;
+		
+		[self.clockView addSubview:image];
+		[minuteIndicators addObject:image];
+	}
+	
+	
 	
 	[self updateTime];
 }
@@ -206,7 +229,7 @@ NSArray *backgroundColors;
 {
 	NSString *minuteKey = [minutes objectAtIndex:[self indexFromMinute:minute]];
 	
-	NSString *modifierKey = minute > 35 ? @"TO" : @"PAST";
+	NSString *modifierKey = minute > 34 ? @"TO" : @"PAST";
 	if (minute < 5) modifierKey = @"OCLOCK";
 		
 	if (![lastMinute isEqualToString:minuteKey])
@@ -222,6 +245,26 @@ NSArray *backgroundColors;
 		[self updateTextStartingAtIndex:[[dict objectForKey:lastModifier] intValue] withLength:[lastModifier length] showing:NO];
 		
 		lastModifier = modifierKey;
+	}
+	
+	// update the partial minute indicator
+	int partialMinutes = minute % 5;
+	
+	if (partialMinutes == 0)
+	{
+		for (int a = 0; a < [minuteIndicators count]; a++)
+		{
+			UIImageView * indicator = (UIImageView*)[self.minuteIndicators objectAtIndex:a];
+			indicator.alpha = kHideAlpha;
+		}
+	}
+	else
+	{
+		for (int a = 0; a < partialMinutes; a++)
+		{
+			UIImageView * indicator = (UIImageView*)[self.minuteIndicators objectAtIndex:a];
+			indicator.alpha = kShowAlpha;
+		}
 	}
 }
 
