@@ -164,7 +164,7 @@ NSUserDefaults *userDefaults;
 	[clockViewDropShadow setFrame:CGRectMake(-15, 0, clockViewDropShadow.frame.size.width, clockViewDropShadow.frame.size.height)];
 	
 	
-	forgroundRotaryChooser = [[TPTRotaryChooser alloc] initWithFrame:CGRectMake(10, 20, 200, 200)];
+	forgroundRotaryChooser = [[TPTRotaryChooser alloc] initWithFrame:CGRectMake(22, 25, 200, 200)];
 	forgroundRotaryChooser.backgroundColor = [UIColor clearColor];
 	forgroundRotaryChooser.numberOfSegments = 6;
 	forgroundRotaryChooser.selectedSegment = 5;
@@ -173,7 +173,7 @@ NSUserDefaults *userDefaults;
 	forgroundRotaryChooser.knobImage = [UIImage imageNamed:@"dial"];
 	forgroundRotaryChooser.tag = 100;
 
-	backgroundRotaryChooser = [[TPTRotaryChooser alloc] initWithFrame:CGRectMake(10, self.view.frame.size.height - 200 - 20, 200, 200)];
+	backgroundRotaryChooser = [[TPTRotaryChooser alloc] init];
 	backgroundRotaryChooser.backgroundColor = [UIColor clearColor];
 	backgroundRotaryChooser.numberOfSegments = 6;
 	backgroundRotaryChooser.selectedSegment = 5;
@@ -390,6 +390,9 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	float width = ScreenWidth;
 	float height = ScreenHeight;
 	
+	NSLog(@"translated height %f, width %f", height, width );
+	
+	
 	if (orientation == UIInterfaceOrientationLandscapeLeft || orientation == UIInterfaceOrientationLandscapeRight)
 	{
 		height = ScreenWidth;
@@ -420,6 +423,7 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 	self.clockBackground.frame = CGRectMake(0, 0, width, height);
 
+	backgroundRotaryChooser.frame = CGRectMake(122, height - 100 - 25, 200, 200);
 }
 
 
