@@ -1,6 +1,6 @@
 //
 //  UIImage+ImageWithColor.m
-//  WordClock
+//  AlphaClock
 //
 //  Created by James Rutherford on 2012-12-03.
 //  Copyright (c) 2012 Braxio Interactive. All rights reserved.

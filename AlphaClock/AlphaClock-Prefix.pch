@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'WordClock' target in the 'WordClock' project
+// Prefix header for all source files of the 'AlphaClock' target in the 'AlphaClock' project
 //
 
 #import <Availability.h>
