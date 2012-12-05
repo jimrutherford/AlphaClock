@@ -10,6 +10,9 @@
 #import "UIImage+ImageWithColor.h"
 #import	"UIColor+UIColorAdditions.h"
 
+#define ScreenWidth                         [[UIScreen mainScreen] bounds].size.width
+#define ScreenHeight                        [[UIScreen mainScreen] bounds].size.height
+
 #define kTextHeight 60
 #define kTextWidth	60
 #define kHorizontalPadding 10
@@ -74,17 +77,12 @@ NSUserDefaults *userDefaults;
 	elements = [[NSMutableArray alloc] init];
 	minuteIndicators = [[NSMutableArray alloc] init];
 	
-	float horizontalCenterOffset = (self.view.frame.size.width - (kNumberOfColumns * (kTextWidth + kHorizontalPadding))) /2;
-	float verticalCenterOffset = (self.view.frame.size.height - (kNumberOfRows * (kTextHeight + kVerticalPadding))) /2;
 	
 	for (int row = 0; row <kNumberOfRows; row++)
 	{
 		for (int col = 0; col < kNumberOfColumns; col++)
 		{
-			float x = col * (kTextWidth + kHorizontalPadding) + horizontalCenterOffset;
-			float y = row * (kTextHeight + kVerticalPadding) + verticalCenterOffset;
-			
-			UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(x, y, kTextWidth, kTextHeight)];
+			UILabel *label = [[UILabel alloc] init];
 			label.backgroundColor = [UIColor clearColor];
 			label.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:30];
 			label.textAlignment = NSTextAlignmentCenter;
@@ -194,10 +192,9 @@ NSUserDefaults *userDefaults;
 	
 	// draw minute indicators
 	UIImage *indicator = [UIImage imageNamed:@"minuteIndicator" imageWithColor:startingForgroundColor];
-	float minuteIndicatorHorizontalCenterOffset = (self.view.frame.size.width - (4 * indicator.size.width) - (3 * kInidicatorPadding)) /2;
 	for (int a = 0; a < 4; a++) {
 		UIImageView * image = [[UIImageView alloc] initWithImage:indicator];
-		image.frame = CGRectMake(minuteIndicatorHorizontalCenterOffset + a * kInidicatorPadding, self.view.frame.size.height - 20, indicator.size.width, indicator.size.height);
+
 		image.alpha = kHideAlpha;
 		
 		[self.clockView addSubview:image];
@@ -378,5 +375,57 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	[userDefaults synchronize];
 }
 
+- (void)deviceDidRotate:(NSNotification *)notification
+{
+	NSLog(@"did rotate");
+	UIDeviceOrientation currentOrientation = [[UIDevice currentDevice] orientation];
+	[self layoutElementsWithOrientation:currentOrientation];
+}
+
+- (void) layoutElementsWithOrientation:(UIDeviceOrientation)orientation
+{
+	
+	NSLog(@"height %f, width %f", ScreenHeight, ScreenWidth );
+	
+	float width = ScreenWidth;
+	float height = ScreenHeight;
+	
+	if (orientation == UIInterfaceOrientationLandscapeLeft || orientation == UIInterfaceOrientationLandscapeRight)
+	{
+		height = ScreenWidth;
+		width = ScreenHeight;
+	}
+	
+	float horizontalCenterOffset = (width - (kNumberOfColumns * (kTextWidth + kHorizontalPadding))) /2;
+	float verticalCenterOffset = (height - (kNumberOfRows * (kTextHeight + kVerticalPadding))) /2;
+	
+	for (int row = 0; row <kNumberOfRows; row++)
+	{
+		for (int col = 0; col < kNumberOfColumns; col++)
+		{
+			float x = col * (kTextWidth + kHorizontalPadding) + horizontalCenterOffset;
+			float y = row * (kTextHeight + kVerticalPadding) + verticalCenterOffset;
+			
+			UILabel *label = (UILabel*)[self.elements objectAtIndex:col + (row * kNumberOfColumns)];
+			label.frame = CGRectMake(x, y, kTextWidth, kTextHeight);
+		}
+	}
+	
+	UIImage *indicator = [UIImage imageNamed:@"minuteIndicator"];
+	float minuteIndicatorHorizontalCenterOffset = (width - (4 * indicator.size.width) - (3 * kInidicatorPadding)) /2;
+	for (int a = 0; a < 4; a++) {
+		UIImageView * image = (UIImageView*)[minuteIndicators objectAtIndex:a];
+		image.frame = CGRectMake(minuteIndicatorHorizontalCenterOffset + a * kInidicatorPadding, height - 40, indicator.size.width, indicator.size.height);
+	}
+
+	self.clockBackground.frame = CGRectMake(0, 0, width, height);
+
+}
+
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return YES;
+}
 
 @end

@@ -19,6 +19,11 @@
 	self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
 	self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+	
+	// for screen rotation
+	[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+	[[NSNotificationCenter defaultCenter] addObserver:self.viewController selector:@selector(deviceDidRotate:) name:UIDeviceOrientationDidChangeNotification object:nil];
+	
     return YES;
 }
 
