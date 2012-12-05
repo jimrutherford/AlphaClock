@@ -31,7 +31,6 @@
 		37FDDBAE166E7A13007FA669 /* minuteIndicator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBAD166E7A13007FA669 /* minuteIndicator@2x.png */; };
 		37FDDBB6166E974D007FA669 /* bacgroundColors.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBAF166E974D007FA669 /* bacgroundColors.png */; };
 		37FDDBB7166E974D007FA669 /* clockViewShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBB0166E974D007FA669 /* clockViewShadow.png */; };
-		37FDDBB8166E974D007FA669 /* config.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBB1166E974D007FA669 /* config.png */; };
 		37FDDBB9166E974D007FA669 /* dial.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBB2166E974D007FA669 /* dial.png */; };
 		37FDDBBA166E974D007FA669 /* forgroundColors.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBB3166E974D007FA669 /* forgroundColors.png */; };
 		37FDDBBB166E974D007FA669 /* minuteIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBB4166E974D007FA669 /* minuteIndicator.png */; };
@@ -42,14 +41,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		37FDDB34166805BE007FA669 /* WordClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37FDDB34166805BE007FA669 /* AlphaClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlphaClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FDDB38166805BE007FA669 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		37FDDB3A166805BE007FA669 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		37FDDB3C166805BE007FA669 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		37FDDB40166805BE007FA669 /* WordClock-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WordClock-Info.plist"; sourceTree = "<group>"; };
+		37FDDB40166805BE007FA669 /* AlphaClock-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AlphaClock-Info.plist"; sourceTree = "<group>"; };
 		37FDDB42166805BE007FA669 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		37FDDB44166805BE007FA669 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		37FDDB46166805BE007FA669 /* WordClock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WordClock-Prefix.pch"; sourceTree = "<group>"; };
+		37FDDB46166805BE007FA669 /* AlphaClock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AlphaClock-Prefix.pch"; sourceTree = "<group>"; };
 		37FDDB47166805BE007FA669 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		37FDDB48166805BE007FA669 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		37FDDB4A166805BE007FA669 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -58,26 +57,26 @@
 		37FDDB50166805BE007FA669 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		37FDDB51166805BE007FA669 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		37FDDB54166805BE007FA669 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
-		37FDDB89166D11E2007FA669 /* config.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = config.png; path = WordClock/images/config.png; sourceTree = "<group>"; };
-		37FDDB8A166D11E2007FA669 /* config@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "config@2x.png"; path = "WordClock/images/config@2x.png"; sourceTree = "<group>"; };
-		37FDDB8B166D11E2007FA669 /* optionsBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "optionsBG@2x.png"; path = "WordClock/images/optionsBG@2x.png"; sourceTree = "<group>"; };
-		37FDDB90166D2301007FA669 /* clockViewShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clockViewShadow@2x.png"; path = "WordClock/images/clockViewShadow@2x.png"; sourceTree = "<group>"; };
+		37FDDB89166D11E2007FA669 /* config.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = config.png; path = AlphaClock/images/config.png; sourceTree = "<group>"; };
+		37FDDB8A166D11E2007FA669 /* config@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "config@2x.png"; path = "AlphaClock/images/config@2x.png"; sourceTree = "<group>"; };
+		37FDDB8B166D11E2007FA669 /* optionsBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "optionsBG@2x.png"; path = "AlphaClock/images/optionsBG@2x.png"; sourceTree = "<group>"; };
+		37FDDB90166D2301007FA669 /* clockViewShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clockViewShadow@2x.png"; path = "AlphaClock/images/clockViewShadow@2x.png"; sourceTree = "<group>"; };
 		37FDDB92166D3B7C007FA669 /* TPTRotaryChooser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPTRotaryChooser.h; sourceTree = "<group>"; };
 		37FDDB93166D3B7C007FA669 /* TPTRotaryChooser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPTRotaryChooser.m; sourceTree = "<group>"; };
 		37FDDB9E166D4DA6007FA669 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		37FDDBA0166D51D6007FA669 /* bacgroundColors@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bacgroundColors@2x.png"; path = "WordClock/images/bacgroundColors@2x.png"; sourceTree = "<group>"; };
-		37FDDBA1166D51D6007FA669 /* dial@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "dial@2x.png"; path = "WordClock/images/dial@2x.png"; sourceTree = "<group>"; };
-		37FDDBA2166D51D6007FA669 /* forgroundColors@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "forgroundColors@2x.png"; path = "WordClock/images/forgroundColors@2x.png"; sourceTree = "<group>"; };
+		37FDDBA0166D51D6007FA669 /* bacgroundColors@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bacgroundColors@2x.png"; path = "AlphaClock/images/bacgroundColors@2x.png"; sourceTree = "<group>"; };
+		37FDDBA1166D51D6007FA669 /* dial@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "dial@2x.png"; path = "AlphaClock/images/dial@2x.png"; sourceTree = "<group>"; };
+		37FDDBA2166D51D6007FA669 /* forgroundColors@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "forgroundColors@2x.png"; path = "AlphaClock/images/forgroundColors@2x.png"; sourceTree = "<group>"; };
 		37FDDBA7166D6E22007FA669 /* UIImage+ImageWithColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithColor.h"; sourceTree = "<group>"; };
 		37FDDBA8166D6E22007FA669 /* UIImage+ImageWithColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithColor.m"; sourceTree = "<group>"; };
-		37FDDBAD166E7A13007FA669 /* minuteIndicator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "minuteIndicator@2x.png"; path = "WordClock/images/minuteIndicator@2x.png"; sourceTree = "<group>"; };
-		37FDDBAF166E974D007FA669 /* bacgroundColors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bacgroundColors.png; path = WordClock/images/bacgroundColors.png; sourceTree = "<group>"; };
-		37FDDBB0166E974D007FA669 /* clockViewShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clockViewShadow.png; path = WordClock/images/clockViewShadow.png; sourceTree = "<group>"; };
-		37FDDBB1166E974D007FA669 /* config.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = config.png; path = WordClock/images/config.png; sourceTree = "<group>"; };
-		37FDDBB2166E974D007FA669 /* dial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dial.png; path = WordClock/images/dial.png; sourceTree = "<group>"; };
-		37FDDBB3166E974D007FA669 /* forgroundColors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = forgroundColors.png; path = WordClock/images/forgroundColors.png; sourceTree = "<group>"; };
-		37FDDBB4166E974D007FA669 /* minuteIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = minuteIndicator.png; path = WordClock/images/minuteIndicator.png; sourceTree = "<group>"; };
-		37FDDBB5166E974D007FA669 /* optionsBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = optionsBG.png; path = WordClock/images/optionsBG.png; sourceTree = "<group>"; };
+		37FDDBAD166E7A13007FA669 /* minuteIndicator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "minuteIndicator@2x.png"; path = "AlphaClock/images/minuteIndicator@2x.png"; sourceTree = "<group>"; };
+		37FDDBAF166E974D007FA669 /* bacgroundColors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bacgroundColors.png; path = AlphaClock/images/bacgroundColors.png; sourceTree = "<group>"; };
+		37FDDBB0166E974D007FA669 /* clockViewShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clockViewShadow.png; path = AlphaClock/images/clockViewShadow.png; sourceTree = "<group>"; };
+		37FDDBB1166E974D007FA669 /* config.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = config.png; path = AlphaClock/images/config.png; sourceTree = "<group>"; };
+		37FDDBB2166E974D007FA669 /* dial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dial.png; path = AlphaClock/images/dial.png; sourceTree = "<group>"; };
+		37FDDBB3166E974D007FA669 /* forgroundColors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = forgroundColors.png; path = AlphaClock/images/forgroundColors.png; sourceTree = "<group>"; };
+		37FDDBB4166E974D007FA669 /* minuteIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = minuteIndicator.png; path = AlphaClock/images/minuteIndicator.png; sourceTree = "<group>"; };
+		37FDDBB5166E974D007FA669 /* optionsBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = optionsBG.png; path = AlphaClock/images/optionsBG.png; sourceTree = "<group>"; };
 		37FDDBBD166EA0AE007FA669 /* UIColor+UIColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+UIColorAdditions.h"; sourceTree = "<group>"; };
 		37FDDBBE166EA0AE007FA669 /* UIColor+UIColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+UIColorAdditions.m"; sourceTree = "<group>"; };
 		37FDDBC0166FBA0A007FA669 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
@@ -106,7 +105,7 @@
 				37FDDBC0166FBA0A007FA669 /* Icon-72@2x.png */,
 				37FDDB9E166D4DA6007FA669 /* QuartzCore.framework */,
 				37FDDB5B166805D8007FA669 /* Resources */,
-				37FDDB3E166805BE007FA669 /* WordClock */,
+				37FDDB3E166805BE007FA669 /* AlphaClock */,
 				37FDDB711668270D007FA669 /* Categories */,
 				37FDDB3F166805BE007FA669 /* Supporting Files */,
 				37FDDB37166805BE007FA669 /* Frameworks */,
@@ -117,7 +116,7 @@
 		37FDDB35166805BE007FA669 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				37FDDB34166805BE007FA669 /* WordClock.app */,
+				37FDDB34166805BE007FA669 /* AlphaClock.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,7 +131,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		37FDDB3E166805BE007FA669 /* WordClock */ = {
+		37FDDB3E166805BE007FA669 /* AlphaClock */ = {
 			isa = PBXGroup;
 			children = (
 				37FDDBA6166D6E08007FA669 /* Categories */,
@@ -142,22 +141,22 @@
 				37FDDB50166805BE007FA669 /* ViewController.h */,
 				37FDDB51166805BE007FA669 /* ViewController.m */,
 			);
-			path = WordClock;
+			path = AlphaClock;
 			sourceTree = "<group>";
 		};
 		37FDDB3F166805BE007FA669 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				37FDDB40166805BE007FA669 /* WordClock-Info.plist */,
+				37FDDB40166805BE007FA669 /* AlphaClock-Info.plist */,
 				37FDDB41166805BE007FA669 /* InfoPlist.strings */,
 				37FDDB44166805BE007FA669 /* main.m */,
-				37FDDB46166805BE007FA669 /* WordClock-Prefix.pch */,
+				37FDDB46166805BE007FA669 /* AlphaClock-Prefix.pch */,
 				37FDDB4A166805BE007FA669 /* Default.png */,
 				37FDDB4C166805BE007FA669 /* Default@2x.png */,
 				37FDDB4E166805BE007FA669 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
-			path = WordClock;
+			path = AlphaClock;
 			sourceTree = "<group>";
 		};
 		37FDDB5B166805D8007FA669 /* Resources */ = {
@@ -229,9 +228,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		37FDDB33166805BE007FA669 /* WordClock */ = {
+		37FDDB33166805BE007FA669 /* AlphaClock */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 37FDDB58166805BE007FA669 /* Build configuration list for PBXNativeTarget "WordClock" */;
+			buildConfigurationList = 37FDDB58166805BE007FA669 /* Build configuration list for PBXNativeTarget "AlphaClock" */;
 			buildPhases = (
 				37FDDB30166805BE007FA669 /* Sources */,
 				37FDDB31166805BE007FA669 /* Frameworks */,
@@ -241,9 +240,9 @@
 			);
 			dependencies = (
 			);
-			name = WordClock;
-			productName = WordClock;
-			productReference = 37FDDB34166805BE007FA669 /* WordClock.app */;
+			name = AlphaClock;
+			productName = AlphaClock;
+			productReference = 37FDDB34166805BE007FA669 /* AlphaClock.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -255,7 +254,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Braxio Interactive";
 			};
-			buildConfigurationList = 37FDDB2E166805BE007FA669 /* Build configuration list for PBXProject "WordClock" */;
+			buildConfigurationList = 37FDDB2E166805BE007FA669 /* Build configuration list for PBXProject "AlphaClock" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -267,7 +266,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				37FDDB33166805BE007FA669 /* WordClock */,
+				37FDDB33166805BE007FA669 /* AlphaClock */,
 			);
 		};
 /* End PBXProject section */
@@ -292,7 +291,6 @@
 				37FDDBAE166E7A13007FA669 /* minuteIndicator@2x.png in Resources */,
 				37FDDBB6166E974D007FA669 /* bacgroundColors.png in Resources */,
 				37FDDBB7166E974D007FA669 /* clockViewShadow.png in Resources */,
-				37FDDBB8166E974D007FA669 /* config.png in Resources */,
 				37FDDBB9166E974D007FA669 /* dial.png in Resources */,
 				37FDDBBA166E974D007FA669 /* forgroundColors.png in Resources */,
 				37FDDBBB166E974D007FA669 /* minuteIndicator.png in Resources */,
@@ -335,7 +333,7 @@
 				37FDDB54166805BE007FA669 /* en */,
 			);
 			name = ViewController.xib;
-			path = WordClock;
+			path = AlphaClock;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -396,9 +394,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WordClock/WordClock-Prefix.pch";
-				INFOPLIST_FILE = "WordClock/WordClock-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "AlphaClock/AlphaClock-Prefix.pch";
+				INFOPLIST_FILE = "AlphaClock/AlphaClock-Info.plist";
+				PRODUCT_NAME = AlphaClock;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -407,9 +405,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WordClock/WordClock-Prefix.pch";
-				INFOPLIST_FILE = "WordClock/WordClock-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "AlphaClock/AlphaClock-Prefix.pch";
+				INFOPLIST_FILE = "AlphaClock/AlphaClock-Info.plist";
+				PRODUCT_NAME = AlphaClock;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -417,7 +415,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		37FDDB2E166805BE007FA669 /* Build configuration list for PBXProject "WordClock" */ = {
+		37FDDB2E166805BE007FA669 /* Build configuration list for PBXProject "AlphaClock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				37FDDB56166805BE007FA669 /* Debug */,
@@ -426,7 +424,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		37FDDB58166805BE007FA669 /* Build configuration list for PBXNativeTarget "WordClock" */ = {
+		37FDDB58166805BE007FA669 /* Build configuration list for PBXNativeTarget "AlphaClock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				37FDDB59166805BE007FA669 /* Debug */,
