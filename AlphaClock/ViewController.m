@@ -216,15 +216,14 @@ NSUserDefaults *userDefaults;
 
 - (void)swipeHandler:(UISwipeGestureRecognizer *)recognizer
 {
-	NSString *direction = @"right";
 	if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft)
 	{
-		direction = @"left";
+		[self showOptionsMenu:NO];
 	}
-	
-	//NSLog(@"Swipe %@, %i", direction, recognizer.direction);
-	
-	[self showOrHideOptionsMenu];
+	else
+	{
+		[self showOptionsMenu:YES];
+	}
 }
 
 - (void) setForgroundColor:(UIColor*)color
@@ -345,26 +344,36 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 }
 
 - (IBAction)configButton:(id)sender {
+
+	CGRect clockViewFrame = self.clockView.frame;
+	if (clockViewFrame.origin.x == 0)
+	{
+		[self showOptionsMenu:YES];
+	}
+	else
+	{
+		[self showOptionsMenu:NO];
+	}
+
 	
-	[self showOrHideOptionsMenu];
+	
 }
 
-- (void) showOrHideOptionsMenu
+- (void) showOptionsMenu:(BOOL)show
 {
 	CGRect clockViewFrame = self.clockView.frame;
     
-	if (clockViewFrame.origin.x == 0)
+	if (show)
 	{
-		
 		clockViewFrame.origin.x = 250;
 	}
 	else
 	{
 		clockViewFrame.origin.x = 0;
 	}
-	
+
     [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationDuration:0.4];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
 	
     self.clockView.frame = clockViewFrame;
@@ -391,6 +400,13 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		[self setForgroundColor:newForgroundColor];
 		NSString *stringColor = [UIColor stringFromUIColor:newForgroundColor];
 		[userDefaults setObject:stringColor forKey:optionKeyForgroundColor];
+		
+		for (int a = 0; a < 4; a++) {
+			UIImage *indicator = [UIImage imageNamed:@"minuteIndicator" imageWithColor:newForgroundColor];
+			UIImageView * image = (UIImageView*)[minuteIndicators objectAtIndex:a];
+			image.image = indicator;
+		}
+		
 	}
 	else if (chooser.tag == 200)
 	{
