@@ -53,17 +53,46 @@ NSArray *backgroundColors;
 
 NSUserDefaults *userDefaults;
 
+#pragma mark -
+#pragma mark Main View Initialization
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
+	// init some objects that will be needed later
+	gregorianCal = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+	hours = @[@"TWELVE", @"ONE", @"TWO", @"THREE", @"FOUR", @"FIVE", @"SIX", @"SEVEN", @"EIGHT", @"NINE", @"TEN", @"ELEVEN", @"TWELVE"];
+	minutes = @[@"OCLOCK", @"five", @"ten", @"QUARTER", @"TWENTY", @"TWENTYFIVE", @"HALF", @"TWENTYFIVE", @"TWENTY", @"QUARTER", @"ten", @"five"];
+	
+	lastMinute = lastHour = lastModifier = @"";
+
+	
+	// populate arrays with colors
+	forgroundColors = @[
+	[UIColor colorWithRed:1.00f green:0.62f blue:0.63f alpha:1.00f],
+	[UIColor colorWithRed:0.61f green:0.82f blue:1.00f alpha:1.00f],
+	[UIColor colorWithRed:1.00f green:0.91f blue:0.62f alpha:1.00f],
+	[UIColor colorWithRed:0.82f green:0.61f blue:1.00f alpha:1.00f],
+	[UIColor colorWithRed:0.59f green:1.00f blue:0.62f alpha:1.00f],
+	[UIColor colorWithRed:0.93f green:0.94f blue:0.94f alpha:1.00f]
+	];
+	
+	backgroundColors = @[
+	[UIColor colorWithRed:0.40f green:0.00f blue:0.00f alpha:1.00f],
+	[UIColor colorWithRed:0.00f green:0.00f blue:0.42f alpha:1.00f],
+	[UIColor colorWithRed:0.24f green:0.18f blue:0.00f alpha:1.00f],
+	[UIColor colorWithRed:0.24f green:0.00f blue:0.25f alpha:1.00f],
+	[UIColor colorWithRed:0.00f green:0.25f blue:0.00f alpha:1.00f],
+	[UIColor colorWithRed:0.00f green:0.00f blue:0.00f alpha:1.00f]
+	];
+	
+	
 	userDefaults = [NSUserDefaults standardUserDefaults];
-	
-	
-	
+
 	// get default or lastUsed colors
-	UIColor * startingForgroundColor = [UIColor whiteColor];
-	UIColor * startingBackgroundColor = [UIColor blackColor];
+	UIColor * startingForgroundColor = [forgroundColors objectAtIndex:5];
+	UIColor * startingBackgroundColor = [backgroundColors objectAtIndex:5];
 	
 	if ([userDefaults objectForKey:optionKeyForgroundColor] != nil)
 	{
@@ -135,39 +164,12 @@ NSUserDefaults *userDefaults;
 	[self updateTextStartingAtIndex:[[dict objectForKey:@"IT"] intValue] withLength:2 showing:YES];
 	[self updateTextStartingAtIndex:[[dict objectForKey:@"IS"] intValue] withLength:2 showing:YES];
 	
-	// init some objects that will be needed later
-	gregorianCal = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-	hours = @[@"TWELVE", @"ONE", @"TWO", @"THREE", @"FOUR", @"FIVE", @"SIX", @"SEVEN", @"EIGHT", @"NINE", @"TEN", @"ELEVEN", @"TWELVE"];
-	minutes = @[@"OCLOCK", @"five", @"ten", @"QUARTER", @"TWENTY", @"TWENTYFIVE", @"HALF", @"TWENTYFIVE", @"TWENTY", @"QUARTER", @"ten", @"five"];
-	
-	forgroundColors = @[
-	[UIColor colorWithRed:1.00f green:0.62f blue:0.63f alpha:1.00f],
-	[UIColor colorWithRed:0.61f green:0.82f blue:1.00f alpha:1.00f],
-	[UIColor colorWithRed:1.00f green:0.91f blue:0.62f alpha:1.00f],
-	[UIColor colorWithRed:0.82f green:0.61f blue:1.00f alpha:1.00f],
-	[UIColor colorWithRed:0.59f green:1.00f blue:0.62f alpha:1.00f],
-	[UIColor colorWithRed:0.93f green:0.94f blue:0.94f alpha:1.00f]
-	];
-
-	backgroundColors = @[
-	[UIColor colorWithRed:0.40f green:0.00f blue:0.00f alpha:1.00f],
-	[UIColor colorWithRed:0.00f green:0.00f blue:0.42f alpha:1.00f],
-	[UIColor colorWithRed:0.24f green:0.18f blue:0.00f alpha:1.00f],
-	[UIColor colorWithRed:0.24f green:0.00f blue:0.25f alpha:1.00f],
-	[UIColor colorWithRed:0.00f green:0.25f blue:0.00f alpha:1.00f],
-	[UIColor colorWithRed:0.00f green:0.00f blue:0.00f alpha:1.00f]
-	];
-	
-	lastMinute = lastHour = lastModifier = @"";
-	
 	[clockBackground setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
 	[clockViewDropShadow setFrame:CGRectMake(-15, 0, clockViewDropShadow.frame.size.width, clockViewDropShadow.frame.size.height)];
-	
 	
 	forgroundRotaryChooser = [[TPTRotaryChooser alloc] initWithFrame:CGRectMake(22, 25, 200, 200)];
 	forgroundRotaryChooser.backgroundColor = [UIColor clearColor];
 	forgroundRotaryChooser.numberOfSegments = 6;
-	forgroundRotaryChooser.selectedSegment = 5;
 	forgroundRotaryChooser.delegate = self;
 	forgroundRotaryChooser.backgroundImage = [UIImage imageNamed:@"forgroundColors"];
 	forgroundRotaryChooser.knobImage = [UIImage imageNamed:@"dial"];
@@ -176,11 +178,29 @@ NSUserDefaults *userDefaults;
 	backgroundRotaryChooser = [[TPTRotaryChooser alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
 	backgroundRotaryChooser.backgroundColor = [UIColor clearColor];
 	backgroundRotaryChooser.numberOfSegments = 6;
-	backgroundRotaryChooser.selectedSegment = 5;
 	backgroundRotaryChooser.delegate = self;
 	backgroundRotaryChooser.backgroundImage = [UIImage imageNamed:@"bacgroundColors"];
 	backgroundRotaryChooser.knobImage = [UIImage imageNamed:@"dial"];
 	backgroundRotaryChooser.tag = 200;
+	
+	// set the selected segments of our rotary choosers
+	for (int a = 0; a < [forgroundColors count]; a++)
+	{
+		if ([[UIColor stringFromUIColor:startingForgroundColor] isEqualToString:[UIColor stringFromUIColor:[forgroundColors objectAtIndex:a]]] )
+		{
+			forgroundRotaryChooser.selectedSegment = a;
+			break;
+		}
+	}
+	
+	for (int a = 0; a < [backgroundColors count]; a++)
+	{
+		if ([[UIColor stringFromUIColor:startingBackgroundColor] isEqualToString:[UIColor stringFromUIColor:[backgroundColors objectAtIndex:a]]] )
+		{
+			backgroundRotaryChooser.selectedSegment = a;
+			break;
+		}
+	}
 	
 	[self setForgroundColor:startingForgroundColor];
 	[self.clockBackground setBackgroundColor:startingBackgroundColor];
@@ -201,7 +221,7 @@ NSUserDefaults *userDefaults;
 		[minuteIndicators addObject:image];
 	}
 
-	
+	// setup and add gesture recognizers to hide/show options panel
 	UISwipeGestureRecognizer *swipeLeftRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeHandler:)];
 	UISwipeGestureRecognizer *swipeRightRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeHandler:)];
 	
@@ -214,49 +234,28 @@ NSUserDefaults *userDefaults;
 	[self updateTime];
 }
 
-- (void)swipeHandler:(UISwipeGestureRecognizer *)recognizer
-{
-	if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft)
-	{
-		[self showOptionsMenu:NO];
-	}
-	else
-	{
-		[self showOptionsMenu:YES];
-	}
-}
-
-- (void) setForgroundColor:(UIColor*)color
-{
-	for (UILabel* label in elements)
-	{
-		label.textColor = color;
-	}
-	[self.configButton setImage:[UIImage imageNamed:@"config" imageWithColor:color] forState:UIControlStateNormal];
-}
+#pragma mark -
+#pragma mark Clock Display Logic
 
 - (void) updateTime
 {
 	NSDateComponents *dateComponents = [gregorianCal components: (NSHourCalendarUnit | NSMinuteCalendarUnit)
 												  fromDate: [NSDate date]];
 
-	[self displayMinute:[dateComponents minute]];
-	
+	// if we are 35 minutes past the hour or greater, our display needs to be
+	// "PAST" the next hour.  Lets add one to the hour in this case
 	int hour = [dateComponents hour];
 	if ([dateComponents minute] > 34)
 	{
 		hour += 1;
 	}
 	
+	[self displayMinute:[dateComponents minute]];
 	[self displayHour:hour];
 	
 	[self performSelector:@selector(updateTime) withObject:self afterDelay:15.0f];
 }
 
-- (int) indexFromMinute:(int)minute
-{
-	return (minute - (minute % 5)) / 5;
-}
 
 - (void) displayMinute:(int)minute
 {
@@ -328,20 +327,8 @@ NSUserDefaults *userDefaults;
 	}
 }
 
-
-NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
--(NSString *) randomLetter {
-	unichar character = [letters characterAtIndex: arc4random()%[letters length]];
-    return [NSString stringWithFormat:@"%C", character];
-}
-
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+#pragma mark -
+#pragma mark Options Menu
 
 - (IBAction)configButton:(id)sender {
 
@@ -354,9 +341,18 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	{
 		[self showOptionsMenu:NO];
 	}
+}
 
-	
-	
+- (void)swipeHandler:(UISwipeGestureRecognizer *)recognizer
+{
+	if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft)
+	{
+		[self showOptionsMenu:NO];
+	}
+	else
+	{
+		[self showOptionsMenu:YES];
+	}
 }
 
 - (void) showOptionsMenu:(BOOL)show
@@ -382,9 +378,11 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 }
 
+#pragma mark -
+#pragma mark TPTRotaryChooser Delegate Methods
+
 - (void)rotaryChooserDidChangeSelectedSegment:(TPTRotaryChooser *)chooser
 {
-	NSLog(@"changing");
 	if (chooser.tag == 100)
 	{
 		[self setForgroundColor:[forgroundColors objectAtIndex:chooser.currentSegment]];
@@ -393,7 +391,6 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 - (void)rotaryChooserDidSelectedSegment:(TPTRotaryChooser *)chooser
 {
-	NSLog(@"selected");
 	if (chooser.tag == 100)
 	{
 		UIColor * newForgroundColor = (UIColor*)[forgroundColors objectAtIndex:chooser.selectedSegment];
@@ -418,23 +415,31 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	[userDefaults synchronize];
 }
 
+#pragma mark -
+#pragma mark Visual Styling
+
+- (void) setForgroundColor:(UIColor*)color
+{
+	for (UILabel* label in elements)
+	{
+		label.textColor = color;
+	}
+	[self.configButton setImage:[UIImage imageNamed:@"config" imageWithColor:color] forState:UIControlStateNormal];
+}
+
+#pragma mark -
+#pragma mark Device Rotation and Layout
+
 - (void)deviceDidRotate:(NSNotification *)notification
 {
-	NSLog(@"did rotate");
 	UIDeviceOrientation currentOrientation = [[UIDevice currentDevice] orientation];
 	[self layoutElementsWithOrientation:currentOrientation];
 }
 
 - (void) layoutElementsWithOrientation:(UIDeviceOrientation)orientation
 {
-	
-	NSLog(@"height %f, width %f", ScreenHeight, ScreenWidth );
-	
 	float width = ScreenWidth;
 	float height = ScreenHeight;
-	
-	NSLog(@"translated height %f, width %f", height, width );
-	
 	
 	if (orientation == UIInterfaceOrientationLandscapeLeft || orientation == UIInterfaceOrientationLandscapeRight)
 	{
@@ -469,6 +474,30 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	backgroundRotaryChooser.frame = CGRectMake(22, height - 200 - 25, 200, 200);
 }
 
+#pragma mark -
+#pragma mark Utility Methods
+
+NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+- (int) indexFromMinute:(int)minute
+{
+	return (minute - (minute % 5)) / 5;
+}
+
+-(NSString *) randomLetter {
+	unichar character = [letters characterAtIndex: arc4random()%[letters length]];
+    return [NSString stringWithFormat:@"%C", character];
+}
+
+
+#pragma mark -
+#pragma mark Boilerplate
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
