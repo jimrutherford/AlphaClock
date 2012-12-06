@@ -173,7 +173,7 @@ NSUserDefaults *userDefaults;
 	forgroundRotaryChooser.knobImage = [UIImage imageNamed:@"dial"];
 	forgroundRotaryChooser.tag = 100;
 
-	backgroundRotaryChooser = [[TPTRotaryChooser alloc] init];
+	backgroundRotaryChooser = [[TPTRotaryChooser alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
 	backgroundRotaryChooser.backgroundColor = [UIColor clearColor];
 	backgroundRotaryChooser.numberOfSegments = 6;
 	backgroundRotaryChooser.selectedSegment = 5;
@@ -201,9 +201,31 @@ NSUserDefaults *userDefaults;
 		[minuteIndicators addObject:image];
 	}
 
+	
+	UISwipeGestureRecognizer *swipeLeftRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeHandler:)];
+	UISwipeGestureRecognizer *swipeRightRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeHandler:)];
+	
+	[swipeLeftRecognizer setDirection:( UISwipeGestureRecognizerDirectionLeft )];
+	[swipeRightRecognizer setDirection:( UISwipeGestureRecognizerDirectionRight )];
+	
+	[[self view] addGestureRecognizer:swipeLeftRecognizer];
+	[[self view] addGestureRecognizer:swipeRightRecognizer];
+	
 	[self updateTime];
 }
 
+- (void)swipeHandler:(UISwipeGestureRecognizer *)recognizer
+{
+	NSString *direction = @"right";
+	if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft)
+	{
+		direction = @"left";
+	}
+	
+	//NSLog(@"Swipe %@, %i", direction, recognizer.direction);
+	
+	[self showOrHideOptionsMenu];
+}
 
 - (void) setForgroundColor:(UIColor*)color
 {
@@ -324,6 +346,11 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 - (IBAction)configButton:(id)sender {
 	
+	[self showOrHideOptionsMenu];
+}
+
+- (void) showOrHideOptionsMenu
+{
 	CGRect clockViewFrame = self.clockView.frame;
     
 	if (clockViewFrame.origin.x == 0)
@@ -423,7 +450,7 @@ NSString *letters = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 	self.clockBackground.frame = CGRectMake(0, 0, width, height);
 
-	backgroundRotaryChooser.frame = CGRectMake(122, height - 100 - 25, 200, 200);
+	backgroundRotaryChooser.frame = CGRectMake(22, height - 200 - 25, 200, 200);
 }
 
 

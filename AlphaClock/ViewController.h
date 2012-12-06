@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TPTRotaryChooser.h"
 
-@interface ViewController : UIViewController <TPTRotaryChooserDelegate>
+@interface ViewController : UIViewController <TPTRotaryChooserDelegate,UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *clockView;
 @property (weak, nonatomic) IBOutlet UIView *optionsView;
