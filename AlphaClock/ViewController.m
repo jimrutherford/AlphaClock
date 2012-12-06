@@ -469,8 +469,8 @@ NSUserDefaults *userDefaults;
 		image.frame = CGRectMake(minuteIndicatorHorizontalCenterOffset + a * kInidicatorPadding, height - 40, indicator.size.width, indicator.size.height);
 	}
 
-	self.clockBackground.frame = CGRectMake(0, 0, width, height);
-
+	self.clockBackground.frame = self.optionsView.frame = CGRectMake(0, 0, width, height);
+	 
 	backgroundRotaryChooser.frame = CGRectMake(22, height - 200 - 25, 200, 200);
 }
 

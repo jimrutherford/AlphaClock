@@ -20,7 +20,6 @@
 		37FDDB55166805BE007FA669 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDB53166805BE007FA669 /* ViewController.xib */; };
 		37FDDB8C166D11E2007FA669 /* config.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDB89166D11E2007FA669 /* config.png */; };
 		37FDDB8D166D11E2007FA669 /* config@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDB8A166D11E2007FA669 /* config@2x.png */; };
-		37FDDB8E166D11E2007FA669 /* optionsBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDB8B166D11E2007FA669 /* optionsBG@2x.png */; };
 		37FDDB91166D2301007FA669 /* clockViewShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDB90166D2301007FA669 /* clockViewShadow@2x.png */; };
 		37FDDB94166D3B7C007FA669 /* TPTRotaryChooser.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FDDB93166D3B7C007FA669 /* TPTRotaryChooser.m */; };
 		37FDDB9F166D4DA6007FA669 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FDDB9E166D4DA6007FA669 /* QuartzCore.framework */; };
@@ -34,7 +33,6 @@
 		37FDDBB9166E974D007FA669 /* dial.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBB2166E974D007FA669 /* dial.png */; };
 		37FDDBBA166E974D007FA669 /* forgroundColors.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBB3166E974D007FA669 /* forgroundColors.png */; };
 		37FDDBBB166E974D007FA669 /* minuteIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBB4166E974D007FA669 /* minuteIndicator.png */; };
-		37FDDBBC166E974D007FA669 /* optionsBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBB5166E974D007FA669 /* optionsBG.png */; };
 		37FDDBBF166EA0AE007FA669 /* UIColor+UIColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FDDBBE166EA0AE007FA669 /* UIColor+UIColorAdditions.m */; };
 		37FDDBC1166FBA0A007FA669 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBC0166FBA0A007FA669 /* Icon-72@2x.png */; };
 		37FDDBC3166FBA0F007FA669 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FDDBC2166FBA0F007FA669 /* Icon-72.png */; };
@@ -63,7 +61,6 @@
 		37FDDB54166805BE007FA669 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		37FDDB89166D11E2007FA669 /* config.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = config.png; path = AlphaClock/images/config.png; sourceTree = "<group>"; };
 		37FDDB8A166D11E2007FA669 /* config@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "config@2x.png"; path = "AlphaClock/images/config@2x.png"; sourceTree = "<group>"; };
-		37FDDB8B166D11E2007FA669 /* optionsBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "optionsBG@2x.png"; path = "AlphaClock/images/optionsBG@2x.png"; sourceTree = "<group>"; };
 		37FDDB90166D2301007FA669 /* clockViewShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clockViewShadow@2x.png"; path = "AlphaClock/images/clockViewShadow@2x.png"; sourceTree = "<group>"; };
 		37FDDB92166D3B7C007FA669 /* TPTRotaryChooser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPTRotaryChooser.h; sourceTree = "<group>"; };
 		37FDDB93166D3B7C007FA669 /* TPTRotaryChooser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPTRotaryChooser.m; sourceTree = "<group>"; };
@@ -80,7 +77,6 @@
 		37FDDBB2166E974D007FA669 /* dial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dial.png; path = AlphaClock/images/dial.png; sourceTree = "<group>"; };
 		37FDDBB3166E974D007FA669 /* forgroundColors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = forgroundColors.png; path = AlphaClock/images/forgroundColors.png; sourceTree = "<group>"; };
 		37FDDBB4166E974D007FA669 /* minuteIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = minuteIndicator.png; path = AlphaClock/images/minuteIndicator.png; sourceTree = "<group>"; };
-		37FDDBB5166E974D007FA669 /* optionsBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = optionsBG.png; path = AlphaClock/images/optionsBG.png; sourceTree = "<group>"; };
 		37FDDBBD166EA0AE007FA669 /* UIColor+UIColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+UIColorAdditions.h"; sourceTree = "<group>"; };
 		37FDDBBE166EA0AE007FA669 /* UIColor+UIColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+UIColorAdditions.m"; sourceTree = "<group>"; };
 		37FDDBC0166FBA0A007FA669 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
@@ -197,7 +193,6 @@
 				37FDDBA2166D51D6007FA669 /* forgroundColors@2x.png */,
 				37FDDB89166D11E2007FA669 /* config.png */,
 				37FDDB8A166D11E2007FA669 /* config@2x.png */,
-				37FDDB8B166D11E2007FA669 /* optionsBG@2x.png */,
 				37FDDB90166D2301007FA669 /* clockViewShadow@2x.png */,
 				37FDDBAF166E974D007FA669 /* bacgroundColors.png */,
 				37FDDBB0166E974D007FA669 /* clockViewShadow.png */,
@@ -205,7 +200,6 @@
 				37FDDBB2166E974D007FA669 /* dial.png */,
 				37FDDBB3166E974D007FA669 /* forgroundColors.png */,
 				37FDDBB4166E974D007FA669 /* minuteIndicator.png */,
-				37FDDBB5166E974D007FA669 /* optionsBG.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -295,7 +289,6 @@
 				37FDDB55166805BE007FA669 /* ViewController.xib in Resources */,
 				37FDDB8C166D11E2007FA669 /* config.png in Resources */,
 				37FDDB8D166D11E2007FA669 /* config@2x.png in Resources */,
-				37FDDB8E166D11E2007FA669 /* optionsBG@2x.png in Resources */,
 				37FDDB91166D2301007FA669 /* clockViewShadow@2x.png in Resources */,
 				37FDDBA3166D51D6007FA669 /* bacgroundColors@2x.png in Resources */,
 				37FDDBA4166D51D6007FA669 /* dial@2x.png in Resources */,
@@ -306,7 +299,6 @@
 				37FDDBB9166E974D007FA669 /* dial.png in Resources */,
 				37FDDBBA166E974D007FA669 /* forgroundColors.png in Resources */,
 				37FDDBBB166E974D007FA669 /* minuteIndicator.png in Resources */,
-				37FDDBBC166E974D007FA669 /* optionsBG.png in Resources */,
 				37FDDBC1166FBA0A007FA669 /* Icon-72@2x.png in Resources */,
 				37FDDBC3166FBA0F007FA669 /* Icon-72.png in Resources */,
 				37FDDBCA16701308007FA669 /* Default-Landscape~ipad.png in Resources */,
