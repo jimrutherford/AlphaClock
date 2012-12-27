@@ -25,5 +25,6 @@
 
 @property (nonatomic) TPTRotaryChooser *forgroundRotaryChooser;
 @property (nonatomic) TPTRotaryChooser *backgroundRotaryChooser;
+@property (nonatomic) TPTRotaryChooser *blurBGRotaryChooser;
 
 @end

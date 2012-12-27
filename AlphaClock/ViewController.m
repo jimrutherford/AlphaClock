@@ -38,6 +38,7 @@
 @synthesize clockViewDropShadow;
 @synthesize forgroundRotaryChooser;
 @synthesize backgroundRotaryChooser;
+@synthesize blurBGRotaryChooser;
 
 NSCalendar *gregorianCal;
 NSArray * hours;
@@ -50,6 +51,7 @@ NSString *lastHour;
 
 NSArray *forgroundColors;
 NSArray *backgroundColors;
+NSArray *blurs;
 
 NSUserDefaults *userDefaults;
 
@@ -87,6 +89,14 @@ NSUserDefaults *userDefaults;
 	[UIColor colorWithRed:0.00f green:0.00f blue:0.00f alpha:1.00f]
 	];
 	
+	blurs = @[
+	[UIImage imageNamed:@"blur1.jpg"],
+	[UIImage imageNamed:@"blur2.jpg"],
+	[UIImage imageNamed:@"blur3.jpg"],
+	[UIImage imageNamed:@"blur4.jpg"],
+	[UIImage imageNamed:@"blur5.jpg"],
+	[UIImage imageNamed:@"blur6.jpg"]
+	];
 	
 	userDefaults = [NSUserDefaults standardUserDefaults];
 
@@ -183,6 +193,15 @@ NSUserDefaults *userDefaults;
 	backgroundRotaryChooser.knobImage = [UIImage imageNamed:@"dial"];
 	backgroundRotaryChooser.tag = 200;
 	
+	blurBGRotaryChooser = [[TPTRotaryChooser alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+	blurBGRotaryChooser.backgroundColor = [UIColor clearColor];
+	blurBGRotaryChooser.numberOfSegments = 6;
+	blurBGRotaryChooser.delegate = self;
+	blurBGRotaryChooser.backgroundImage = [UIImage imageNamed:@"blurs"];
+	blurBGRotaryChooser.knobImage = [UIImage imageNamed:@"dial"];
+	blurBGRotaryChooser.tag = 300;
+	
+	
 	// set the selected segments of our rotary choosers
 	for (int a = 0; a < [forgroundColors count]; a++)
 	{
@@ -207,6 +226,7 @@ NSUserDefaults *userDefaults;
 	
 	[self.optionsView addSubview:forgroundRotaryChooser];
 	[self.optionsView addSubview:backgroundRotaryChooser];
+	[self.optionsView addSubview:blurBGRotaryChooser];
 	
 	[self.configButton setAlpha:kHideAlpha];
 	
@@ -407,11 +427,23 @@ NSUserDefaults *userDefaults;
 	}
 	else if (chooser.tag == 200)
 	{
+		// clear any background image if needed
+		[self.clockBackground setImage:nil];
 		UIColor * newBackgroundColor = (UIColor*)[backgroundColors objectAtIndex:chooser.selectedSegment];
 		[self.clockBackground setBackgroundColor:newBackgroundColor];
 		NSString *stringColor = [UIColor stringFromUIColor:newBackgroundColor];
 		[userDefaults setObject:stringColor forKey:optionKeyBackgroundColor];
 	}
+	
+	else if (chooser.tag == 300)
+	{
+		UIImage * newImage = (UIImage*)[blurs objectAtIndex:chooser.selectedSegment];
+		[self.clockBackground setImage:newImage];
+		//NSString *stringColor = [UIColor stringFromUIColor:newBackgroundColor];
+		//[userDefaults setObject:stringColor forKey:optionKeyBackgroundColor];
+	}
+
+	
 	[userDefaults synchronize];
 }
 
@@ -472,6 +504,10 @@ NSUserDefaults *userDefaults;
 	self.clockBackground.frame = self.optionsView.frame = CGRectMake(0, 0, width, height);
 	 
 	backgroundRotaryChooser.frame = CGRectMake(22, height - 200 - 25, 200, 200);
+	
+	
+	blurBGRotaryChooser.frame = CGRectMake(22, height/2 - 100, 200, 200);
+	
 }
 
 #pragma mark -

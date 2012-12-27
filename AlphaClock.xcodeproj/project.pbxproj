@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37A721581689260500E63AB7 /* blur1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37A721521689260500E63AB7 /* blur1.jpg */; };
+		37A721591689260500E63AB7 /* blur2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37A721531689260500E63AB7 /* blur2.jpg */; };
+		37A7215A1689260500E63AB7 /* blur3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37A721541689260500E63AB7 /* blur3.jpg */; };
+		37A7215B1689260500E63AB7 /* blur4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37A721551689260500E63AB7 /* blur4.jpg */; };
+		37A7215C1689260500E63AB7 /* blur5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37A721561689260500E63AB7 /* blur5.jpg */; };
+		37A7215D1689260500E63AB7 /* blur6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37A721571689260500E63AB7 /* blur6.jpg */; };
+		37A721601689261700E63AB7 /* blurs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A7215F1689261700E63AB7 /* blurs@2x.png */; };
 		37FDDB39166805BE007FA669 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FDDB38166805BE007FA669 /* UIKit.framework */; };
 		37FDDB3B166805BE007FA669 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FDDB3A166805BE007FA669 /* Foundation.framework */; };
 		37FDDB3D166805BE007FA669 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FDDB3C166805BE007FA669 /* CoreGraphics.framework */; };
@@ -43,6 +50,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37A721521689260500E63AB7 /* blur1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blur1.jpg; sourceTree = "<group>"; };
+		37A721531689260500E63AB7 /* blur2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blur2.jpg; sourceTree = "<group>"; };
+		37A721541689260500E63AB7 /* blur3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blur3.jpg; sourceTree = "<group>"; };
+		37A721551689260500E63AB7 /* blur4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blur4.jpg; sourceTree = "<group>"; };
+		37A721561689260500E63AB7 /* blur5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blur5.jpg; sourceTree = "<group>"; };
+		37A721571689260500E63AB7 /* blur6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blur6.jpg; sourceTree = "<group>"; };
+		37A7215F1689261700E63AB7 /* blurs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "blurs@2x.png"; path = "AlphaClock/images/blurs@2x.png"; sourceTree = "<group>"; };
 		37FDDB34166805BE007FA669 /* AlphaClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlphaClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FDDB38166805BE007FA669 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		37FDDB3A166805BE007FA669 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -187,6 +201,13 @@
 		37FDDB5D166805ED007FA669 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				37A7215F1689261700E63AB7 /* blurs@2x.png */,
+				37A721521689260500E63AB7 /* blur1.jpg */,
+				37A721531689260500E63AB7 /* blur2.jpg */,
+				37A721541689260500E63AB7 /* blur3.jpg */,
+				37A721551689260500E63AB7 /* blur4.jpg */,
+				37A721561689260500E63AB7 /* blur5.jpg */,
+				37A721571689260500E63AB7 /* blur6.jpg */,
 				37FDDBAD166E7A13007FA669 /* minuteIndicator@2x.png */,
 				37FDDBA0166D51D6007FA669 /* bacgroundColors@2x.png */,
 				37FDDBA1166D51D6007FA669 /* dial@2x.png */,
@@ -305,6 +326,13 @@
 				37FDDBCC1670130E007FA669 /* Default-Landscape@2x~ipad.png in Resources */,
 				37FDDBCE16701583007FA669 /* Default-Portrait~ipad.png in Resources */,
 				37FDDBD016701589007FA669 /* Default-Portrait@2x~ipad.png in Resources */,
+				37A721581689260500E63AB7 /* blur1.jpg in Resources */,
+				37A721591689260500E63AB7 /* blur2.jpg in Resources */,
+				37A7215A1689260500E63AB7 /* blur3.jpg in Resources */,
+				37A7215B1689260500E63AB7 /* blur4.jpg in Resources */,
+				37A7215C1689260500E63AB7 /* blur5.jpg in Resources */,
+				37A7215D1689260500E63AB7 /* blur6.jpg in Resources */,
+				37A721601689261700E63AB7 /* blurs@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
